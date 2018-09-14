@@ -2,13 +2,13 @@
 * {
 	margin: 0;
 	padding: 0;
-	//border: 1px solid red;
+	border: 1px solid red;
 	box-sizing: border-box;    
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	font-family: 'Montserrat', sans-serif;
 	nav {
 		position: fixed;
@@ -56,7 +56,7 @@ body {
 		}
 	}
 	section {
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
 		display: flex;
 		.emptyContent {
@@ -72,7 +72,7 @@ body {
 		}
 	}
 	section#one {
-		background: url("../img/ship.jpg") no-repeat center;
+		background: url("../img/ship.jpg") no-repeat bottom;
 		background-size: cover;
 		&>.content {
 			display: flex;
