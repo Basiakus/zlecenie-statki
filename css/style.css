@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100vw;
+  height: 100vh; }
+  body nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: 100vh;
+    background-color: black;
+    opacity: .9;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    body nav ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 70%;
+      width: 50%;
+      color: white; }
+      body nav ul li {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        border-bottom: 1px solid white;
+        margin-bottom: 50%;
+        transition: all .4s;
+        font-size: 1vw; }
+        body nav ul li i {
+          width: 20%; }
+        body nav ul li span {
+          width: 80%;
+          text-transform: uppercase;
+          font-size: 1.2em;
+          text-align: center; }
+        body nav ul li:hover {
+          color: #57c6fb;
+          border-bottom-color: #57c6fb; }
+  body section {
+    width: 100vw;
+    height: 100vh;
+    display: flex; }
+    body section .emptyContent {
+      flex: 2;
+      float: left; }
+    body section .content {
+      flex: 8;
+      height: 100vh;
+      float: right;
+      color: white;
+      text-shadow: 2px 2px 1px #969696; }
+  body section#one {
+    background: url("../img/ship.jpg") no-repeat center;
+    background-size: cover; }
+    body section#one > .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      body section#one > .content h1, body section#one > .content p {
+        width: 70%;
+        margin: 2%;
+        text-align: left;
+        font-size: 1.4em; }
+
+/*# sourceMappingURL=style.css.map */
