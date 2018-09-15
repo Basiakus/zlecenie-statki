@@ -181,27 +181,30 @@ body {
 	}
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 700px) {
     body {
         nav {
         	width: 30vw;
         	ul {
         		width: 90%;
         		height: 90%;
-        		font-size: 5em;
         		li {
+        			border: none;
         			margin-bottom: 10%;
+        			padding: 0;
         			&:last-child {
-        				padding: 0;
 						i, span {
 						font-size: 3em;
+						}
+						span {
+							width: 100%;
 						}
         			}
         			flex-direction: column;
         			justify-content: center;
         			padding: 10%;
         			i, span {
-        				font-size: 4em;
+        				font-size: 3em;
         				font-weight: bold;
 
         			}
@@ -211,15 +214,16 @@ body {
         section#one {
         	.content {
 				h1 {
-					font-size: 4em;
+					font-size: 3em;
 					text-align: right;
-					margin-bottom: 20%;
+					margin-bottom: 10%;
 				}
 				p {
-					font-size: 1.1em;
+					width: 80%;
+					font-size: 1em;
 					text-align: right;
 					text-transform: uppercase;
-					line-height: 1.6;
+					line-height: 1.2;
 				}
         	}
         }

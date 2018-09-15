@@ -152,34 +152,36 @@ body {
         right: 0;
         border-radius: 3px 0 0 3px; }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 700px) {
   body nav {
     width: 30vw; }
     body nav ul {
       width: 90%;
-      height: 90%;
-      font-size: 5em; }
+      height: 90%; }
       body nav ul li {
+        border: none;
         margin-bottom: 10%;
+        padding: 0;
         flex-direction: column;
         justify-content: center;
         padding: 10%; }
-        body nav ul li:last-child {
-          padding: 0; }
-          body nav ul li:last-child i, body nav ul li:last-child span {
-            font-size: 3em; }
+        body nav ul li:last-child i, body nav ul li:last-child span {
+          font-size: 3em; }
+        body nav ul li:last-child span {
+          width: 100%; }
         body nav ul li i, body nav ul li span {
-          font-size: 4em;
+          font-size: 3em;
           font-weight: bold; }
   body section#one .content h1 {
-    font-size: 4em;
+    font-size: 3em;
     text-align: right;
-    margin-bottom: 20%; }
+    margin-bottom: 10%; }
   body section#one .content p {
-    font-size: 1.1em;
+    width: 80%;
+    font-size: 1em;
     text-align: right;
     text-transform: uppercase;
-    line-height: 1.6; }
+    line-height: 1.2; }
   body section#two .slideshow-container {
     margin-left: 10%;
     width: 80%;
