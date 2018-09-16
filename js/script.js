@@ -5,7 +5,12 @@ const button = document.querySelector('#navButton');
 const navWidth = nav.offsetWidth;
 function showNavigation() {
 	const emptyContents = document.querySelectorAll('.emptyContent');
-	emptyContents.forEach( emptyContent => (!emptyContent.classList.contains('hide')) ? emptyContent.classList.add('hide') : emptyContent.classList.remove('hide'));
+	emptyContents.forEach( emptyContent => 
+		(!emptyContent.classList.contains('hide')) ? 
+		emptyContent.classList.add('hide') : 
+		emptyContent.classList.remove('hide')
+	);
+
 	(!nav.classList.contains('off')) ? nav.classList.add('off') : nav.classList.remove('off');
 	(!button.classList.contains('click')) ? button.classList.add('click') : button.classList.remove('click');
 }
