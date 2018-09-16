@@ -2,9 +2,9 @@
 
 const nav = document.querySelector('nav');
 const button = document.querySelector('#navButton');
-const navWidth = nav.offsetWidth;
+const navWidth = nav.offsetWidth;						
 function showNavigation() {
-	const emptyContents = document.querySelectorAll('.emptyContent');
+	const emptyContents = document.querySelectorAll('.emptyContent');		// add class to all of all .emptyContent's of DOM elements 
 	emptyContents.forEach( emptyContent => 
 		(!emptyContent.classList.contains('hide')) ? 
 		emptyContent.classList.add('hide') : 
