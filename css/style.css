@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: 1px solid red;
   box-sizing: border-box; }
 
 body {
@@ -191,14 +192,14 @@ body {
     color: black;
     flex-direction: column;
     -webkit-flex-direction: column; }
-    body section#tree .content #picesAndHours {
+    body section#tree .content #pricesAndHours {
       display: flex;
       display: -webkit-flex;
       justify-content: center;
       align-items: center;
       width: 100%;
       height: 40%; }
-      body section#tree .content #picesAndHours #price, body section#tree .content #picesAndHours #hour {
+      body section#tree .content #pricesAndHours #price, body section#tree .content #pricesAndHours #hour {
         flex: 1;
         height: 80%;
         display: flex;
@@ -213,29 +214,31 @@ body {
         -moz-box-shadow: 5px 5px 20px 0px #a399a3;
         box-shadow: 5px 5px 20px 0px #a399a3;
         margin: 5%; }
-        body section#tree .content #picesAndHours #price i, body section#tree .content #picesAndHours #hour i {
+        body section#tree .content #pricesAndHours #price i, body section#tree .content #pricesAndHours #hour i {
           font-size: 5em;
           margin-right: 5%; }
-        body section#tree .content #picesAndHours #price ul, body section#tree .content #picesAndHours #hour ul {
+        body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
           width: 50%;
           list-style-type: none; }
-          body section#tree .content #picesAndHours #price ul li, body section#tree .content #picesAndHours #hour ul li {
-            padding: 3% 0;
-            font-weight: 900;
-            text-align: left;
-            text-transform: uppercase; }
-            body section#tree .content #picesAndHours #price ul li span, body section#tree .content #picesAndHours #hour ul li span {
-              float: right;
+          body section#tree .content #pricesAndHours #price ul li, body section#tree .content #pricesAndHours #hour ul li {
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: row;
+            -webkit-flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 900; }
+            body section#tree .content #pricesAndHours #price ul li span, body section#tree .content #pricesAndHours #hour ul li span {
               color: red;
               font-size: 1.1em;
               text-transform: capitalize; }
-      body section#tree .content #picesAndHours #hour ul li {
-        text-align: center; }
-        body section#tree .content #picesAndHours #hour ul li:nth-child(1) {
+      body section#tree .content #pricesAndHours #hour ul li {
+        justify-content: space-around; }
+        body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
           font-size: 1.3em; }
-        body section#tree .content #picesAndHours #hour ul li:nth-child(2), body section#tree .content #picesAndHours #hour ul li:nth-child(3) {
+        body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
           color: red;
-          font-weight: 900;
           font-size: 1.2em; }
     body section#tree .content h3 {
       font-size: 1.4em;
@@ -282,10 +285,28 @@ body {
       flex-direction: column; }
   body section#two .content h3 {
     width: 80%; }
-  body section#tree .content #picesAndHours #price, body section#tree .content #picesAndHours #hour {
-    flex-direction: column;
-    -webkit-flex-direction: column; }
-    body section#tree .content #picesAndHours #price ul li, body section#tree .content #picesAndHours #hour ul li {
-      font-size: .8em; } }
+  body section#tree .content #pricesAndHours {
+    height: 50%; }
+    body section#tree .content #pricesAndHours #price, body section#tree .content #pricesAndHours #hour {
+      flex-direction: column;
+      -webkit-flex-direction: column; }
+      body section#tree .content #pricesAndHours #price i, body section#tree .content #pricesAndHours #hour i {
+        font-size: 4em; }
+      body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
+        width: 90%; }
+    body section#tree .content #pricesAndHours #price ul li {
+      margin: 3% 0;
+      font-size: .7em; }
+      body section#tree .content #pricesAndHours #price ul li span {
+        font-size: 1.2em; }
+    body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
+      font-size: 1em; }
+    body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
+      color: red;
+      font-weight: 900;
+      font-size: .8em; }
+  body section#tree .content h3 {
+    width: 90%;
+    text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */

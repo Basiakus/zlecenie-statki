@@ -1,3 +1,5 @@
+/* --VARIABLE DECLARATION-- */
+
 const nav = document.querySelector('nav');						// navigation
 const button = document.querySelector('#navButton');			// button in navigation (mobile devices)
 const sections = document.querySelectorAll('section');			// all sections
@@ -60,6 +62,7 @@ function showSection() {													// connect navigation point with correct se
 	const index = this.dataset.index;										
 	sections.forEach(section => section.classList.remove('displayFlex'));
 	sections[index].classList.add('displayFlex');
+	showNavigation();
 }
 
 navTrigers.forEach( triger => {

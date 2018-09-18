@@ -2,7 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	//border: 1px solid red;
+	border: 1px solid red;
 	box-sizing: border-box;    
 }
 
@@ -227,7 +227,7 @@ body {
 			color: black;
 			flex-direction: column;
 			-webkit-flex-direction: column;
-			#picesAndHours {
+			#pricesAndHours {
 				display: flex;
 				display: -webkit-flex;
 				justify-content: center;
@@ -257,12 +257,15 @@ body {
 						width: 50%;
 						list-style-type: none;
 						li {
-							padding: 3% 0;
+							display: flex;
+							display: -webkit-flex;
+							flex-direction: row;
+							-webkit-flex-direction: row;
+							justify-content: center;
+							align-items: center;
+							justify-content: space-between;
 							font-weight: 900;
-							text-align: left;
-							text-transform: uppercase;
 							span {
-								float: right;
 								color: red;
 								font-size: 1.1em;
 								text-transform: capitalize;
@@ -273,13 +276,12 @@ body {
 				#hour {
 					ul {
 						li {
-							text-align: center;
+							justify-content: space-around;
 							&:nth-child(1) {
 								font-size: 1.3em;
 							}
 							&:nth-child(2), &:nth-child(3) {
 								color: red;
-								font-weight: 900;
 								font-size: 1.2em;
 							}
 						}
@@ -364,18 +366,47 @@ body {
         }
         section#tree {
         	.content {
-				#picesAndHours {
+				#pricesAndHours {
+					height: 50%;
 					#price, #hour {
-					flex-direction: column;
-					-webkit-flex-direction: column;
+						flex-direction: column;
+						-webkit-flex-direction: column;
+						i {
+							font-size: 4em;
+						}
+						ul {
+							width: 90%;
+						}
+					}
+					#price {
 						ul {
 							li {
-								font-size: .8em;
+								margin: 3% 0;
+								font-size: .7em;
+								span {
+									font-size: 1.2em;
+								}
+							}
+						}
+					}
+					#hour {
+						ul {
+							li {
+								&:nth-child(1) {
+									font-size: 1em;
+								}
+								&:nth-child(2), &:nth-child(3) {
+									color: red;
+									font-weight: 900;
+									font-size: .8em;
+								}
 							}
 						}
 					}
 				}
-				#place {
+				h3 {
+					width: 90%;
+					text-align: center;
 				}
 			}
         }
