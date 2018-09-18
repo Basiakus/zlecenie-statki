@@ -295,7 +295,15 @@ body {
 		}
 	}
 }
-
+@media only screen and (min-width: 801px) {
+	body {
+		nav {
+			#navButton {
+				display: none;
+			}
+		}
+	}
+}
 @media only screen and (max-width: 800px) {
     body {
         nav {

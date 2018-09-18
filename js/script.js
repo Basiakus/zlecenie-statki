@@ -4,10 +4,13 @@ const nav = document.querySelector('nav');						// navigation
 const button = document.querySelector('#navButton');			// button in navigation (mobile devices)
 const sections = document.querySelectorAll('section');			// all sections
 const navTrigers = document.querySelectorAll('nav li');			// navigation poits 
+const prevSlide = document.querySelector('.prev');				// prev slide button
+const nextSlide = document.querySelector('.next');				// next slide button
+let slideIndex = 1; 											// current slide in carusel
 
 
 
-/* --NAVBUTTON IN SECTION#ONE-- */
+/* --NAVBUTTON IN SECTION ONE-- */
 
 function showNavigation() {
 	const navWidth = nav.offsetWidth;						
@@ -17,7 +20,6 @@ function showNavigation() {
 		emptyContent.classList.add('hide') : 
 		emptyContent.classList.remove('hide')
 	);
-
 	(!nav.classList.contains('off')) ? nav.classList.add('off') : nav.classList.remove('off');
 	(!button.classList.contains('click')) ? button.classList.add('click') : button.classList.remove('click');
 }
@@ -25,11 +27,8 @@ button.addEventListener('click', showNavigation);
 
 
 
-/* --CARUSEL IN SECTION#TWO-- */
+/* --CARUSEL IN SECTION TWO-- */
 
-let slideIndex = 1; 										// current slide 
-const prevSlide = document.querySelector('.prev');  		// prev slide button
-const nextSlide = document.querySelector('.next');  		// next slide button
 
 showSlide(slideIndex);
 
@@ -62,9 +61,8 @@ function showSection() {													// connect navigation point with correct se
 	const index = this.dataset.index;										
 	sections.forEach(section => section.classList.remove('displayFlex'));
 	sections[index].classList.add('displayFlex');
-	showNavigation();
+	if (window.matchMedia("(max-width: 801px)").matches) showNavigation();	//call showNavigation() only under 801px width devices 
 }
-
 navTrigers.forEach( triger => {
 	triger.addEventListener('click',showSection);
 });
