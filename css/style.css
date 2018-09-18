@@ -20,7 +20,8 @@ body {
     display: -webkit-flex;
     align-items: center;
     justify-content: center;
-    transition: .5s; }
+    transition: .5s;
+    z-index: 1; }
     body nav #navButton {
       width: 50px;
       height: 50px;
@@ -71,8 +72,7 @@ body {
   body section {
     width: 100%;
     height: 100vh;
-    display: flex;
-    display: -webkit-flex; }
+    display: none; }
     body section .emptyContent {
       flex: 2;
       float: left;
@@ -88,6 +88,9 @@ body {
       color: white;
       justify-content: center;
       align-items: center; }
+  body section.displayFlex {
+    display: flex;
+    display: -webkit-flex; }
   body section#one {
     background: url("../img/ship.jpg") no-repeat bottom;
     background-size: cover; }
@@ -152,12 +155,12 @@ body {
           animation-duration: 1.5s; }
 @-webkit-keyframes fade {
   from {
-    opacity: 0.1; }
+    opacity: 0.6; }
   to {
     opacity: .9; } }
 @keyframes fade {
   from {
-    opacity: 0.1; }
+    opacity: 0.6; }
   to {
     opacity: .9; } }
         body section#two .content .slideshow-container .prev, body section#two .content .slideshow-container .next {
@@ -194,10 +197,10 @@ body {
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 30%; }
+      height: 40%; }
       body section#tree .content #picesAndHours #price, body section#tree .content #picesAndHours #hour {
         flex: 1;
-        height: 100%;
+        height: 80%;
         display: flex;
         display: -webkit-flex;
         flex-direction: row;
@@ -214,13 +217,29 @@ body {
           font-size: 5em;
           margin-right: 5%; }
         body section#tree .content #picesAndHours #price ul, body section#tree .content #picesAndHours #hour ul {
+          width: 50%;
           list-style-type: none; }
           body section#tree .content #picesAndHours #price ul li, body section#tree .content #picesAndHours #hour ul li {
+            padding: 3% 0;
             font-weight: 900;
-            text-align: center; }
-    body section#tree .content #place {
-      width: 100%;
-      height: 30%; }
+            text-align: left;
+            text-transform: uppercase; }
+            body section#tree .content #picesAndHours #price ul li span, body section#tree .content #picesAndHours #hour ul li span {
+              float: right;
+              color: red;
+              font-size: 1.1em;
+              text-transform: capitalize; }
+      body section#tree .content #picesAndHours #hour ul li {
+        text-align: center; }
+        body section#tree .content #picesAndHours #hour ul li:nth-child(1) {
+          font-size: 1.3em; }
+        body section#tree .content #picesAndHours #hour ul li:nth-child(2), body section#tree .content #picesAndHours #hour ul li:nth-child(3) {
+          color: red;
+          font-weight: 900;
+          font-size: 1.2em; }
+    body section#tree .content h3 {
+      font-size: 1.4em;
+      margin-top: 5%; }
 
 @media only screen and (max-width: 800px) {
   body nav {

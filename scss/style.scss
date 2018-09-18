@@ -23,6 +23,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		transition: .5s;
+		z-index: 1;
 		#navButton {
 			width: 50px;
 			height: 50px;
@@ -84,8 +85,7 @@ body {
 	section {
 		width: 100%;
 		height: 100vh;
-		display: flex;
-		display: -webkit-flex;
+		display: none;
 		.emptyContent {
 			flex: 2;
 			float: left;
@@ -104,6 +104,10 @@ body {
 			justify-content: center;
 			align-items: center;
 		}
+	}
+	section.displayFlex {
+		display: flex;
+		display: -webkit-flex;
 	}
 	section#one {
 		background: url("../img/ship.jpg") no-repeat bottom;
@@ -180,11 +184,11 @@ body {
 					animation-duration: 1.5s;
 				}
 				@-webkit-keyframes fade {
-					from {opacity: 0.1} 
+					from {opacity: 0.6} 
 					to {opacity: .9}
 				}
 				@keyframes fade {
-					from {opacity: 0.1} 
+					from {opacity: 0.6} 
 					to {opacity: .9}
 				}
 				.prev, .next {
@@ -229,10 +233,10 @@ body {
 				justify-content: center;
 				align-items: center;
 				width: 100%;
-				height: 30%;
+				height: 40%;
 				#price, #hour {
 					flex:1;
-					height: 100%;
+					height: 80%;
 					display: flex;
 					display: -webkit-flex;
 					flex-direction: row;
@@ -250,17 +254,41 @@ body {
 						margin-right: 5%;
 					}
 					ul {
+						width: 50%;
 						list-style-type: none;
 						li {
+							padding: 3% 0;
 							font-weight: 900;
+							text-align: left;
+							text-transform: uppercase;
+							span {
+								float: right;
+								color: red;
+								font-size: 1.1em;
+								text-transform: capitalize;
+							}
+						}
+					}
+				}
+				#hour {
+					ul {
+						li {
 							text-align: center;
+							&:nth-child(1) {
+								font-size: 1.3em;
+							}
+							&:nth-child(2), &:nth-child(3) {
+								color: red;
+								font-weight: 900;
+								font-size: 1.2em;
+							}
 						}
 					}
 				}
 			}
-			#place {
-				width: 100%;
-				height: 30%;
+			h3 {
+				font-size: 1.4em;
+				margin-top: 5%;
 			}
 		}
 	}
