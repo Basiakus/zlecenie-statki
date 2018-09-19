@@ -72,11 +72,16 @@ body {
   body section {
     width: 100%;
     height: 100vh;
-    display: none; }
+    display: none;
+    filter: blur(35px);
+    opacity: 0;
+    -webkit-opacity: 0;
+    -webkit-filter: blur(35px);
+    transition: .5s; }
     body section .emptyContent {
       flex: 2;
       float: left;
-      transition: all .5s; }
+      transition: .5s; }
     body section .emptyContent.hide {
       flex: 0; }
     body section .content {
@@ -88,6 +93,11 @@ body {
       color: white;
       justify-content: center;
       align-items: center; }
+  body section.changeEffects {
+    opacity: 1;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    -webkit-opacity: 1; }
   body section.displayFlex {
     display: flex;
     display: -webkit-flex; }
