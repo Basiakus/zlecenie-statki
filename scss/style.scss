@@ -103,7 +103,7 @@ body {
 			display: flex;
 			display: -webkit-flex;
 			flex: 8;
-			height: 100vh;
+			height: 100%;
 			float: right;
 			color: white;		
 			justify-content: center;
@@ -247,7 +247,7 @@ body {
 				height: 40%;
 				#price, #hour {
 					flex:1;
-					height: 80%;
+					height: 100%;
 					display: flex;
 					display: -webkit-flex;
 					flex-direction: row;
@@ -261,8 +261,8 @@ body {
 					box-shadow: 5px 5px 20px 0px rgba(163,153,163,1);
 					margin: 5%;
 					i {
-						font-size: 5em;
-						margin-right: 5%;
+						font-size: 4em;
+						margin: 2%;
 					}
 					ul {
 						width: 50%;
@@ -300,9 +300,57 @@ body {
 				}
 			}
 			h3 {
-				font-size: 1.4em;
+				font-size: 1.1em;
 				margin-top: 5%;
 			}
+		}
+	}
+	section#four {
+		.content {
+				display: flex;
+				flex-direction: row;
+				-webkit-flex-direction: row;
+				height: 90vh;
+			#map, #reservation {
+				height: 100%;
+				width: 50%;
+				display: flex;
+				display: -webkit-flex;
+				flex-direction: column;
+				-webkit-flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				color: black;
+			}
+			#reservation {
+				span, h3 {
+					text-align: center;
+					text-transform: uppercase;
+					display: flex;
+					flex-direction: row;
+					-webkit-flex-direction: row;
+					margin: 10%;
+					i {
+						margin-right: 2vw;
+					}
+				}
+				h3 {
+					font-size: 2vw;
+				}
+				span {
+					font-size: 1.5vw;
+					&:nth-child(2) {
+						font-size: 4vw;
+						color: red;
+						font-style: italic;
+						font-weight: 900;
+
+					}
+				}
+			} 
+		}
+		#footer {
+			height: 10vh;
 		}
 	}
 }
@@ -386,7 +434,7 @@ body {
         section#tree {
         	.content {
 				#pricesAndHours {
-					height: 50%;
+					height: 40%;
 					#price, #hour {
 						flex-direction: column;
 						-webkit-flex-direction: column;
@@ -411,6 +459,7 @@ body {
 					#hour {
 						ul {
 							li {
+								text-align: center;
 								&:nth-child(1) {
 									font-size: 1em;
 								}
@@ -429,5 +478,54 @@ body {
 				}
 			}
         }
+		section#four {
+			.content {
+				flex-direction: column-reverse;
+				#map, #reservation {
+					height: 50%;
+					width: 100%;
+				}
+				#reservation {
+					h3 {
+						font-size: 5vw;
+					}
+					span {
+						i, p {
+							font-size: 4.5vw;
+						}
+					}
+				}
+			}
+		}
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-device-width: 800px)  {
+    body {
+        nav {
+        	ul {
+        		li {
+        				flex-direction: row;
+        				text-align: left;
+        				font-size: .3em;
+        		}
+        	}
+        }
+		section#tree {
+			.content {
+				#pricesAndHours {
+					height: 60%;
+				}
+			}
+		}
+		section#four {
+			.content {
+				flex-direction: row;
+				#map, #reservation {
+					height: 100%;
+					width: 50%;
+				}
+			}
+		} 
     }
 }

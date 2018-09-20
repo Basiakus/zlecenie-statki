@@ -88,7 +88,7 @@ body {
       display: flex;
       display: -webkit-flex;
       flex: 8;
-      height: 100vh;
+      height: 100%;
       float: right;
       color: white;
       justify-content: center;
@@ -210,7 +210,7 @@ body {
       height: 40%; }
       body section#tree .content #pricesAndHours #price, body section#tree .content #pricesAndHours #hour {
         flex: 1;
-        height: 80%;
+        height: 100%;
         display: flex;
         display: -webkit-flex;
         flex-direction: row;
@@ -224,8 +224,8 @@ body {
         box-shadow: 5px 5px 20px 0px #a399a3;
         margin: 5%; }
         body section#tree .content #pricesAndHours #price i, body section#tree .content #pricesAndHours #hour i {
-          font-size: 5em;
-          margin-right: 5%; }
+          font-size: 4em;
+          margin: 2%; }
         body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
           width: 50%;
           list-style-type: none; }
@@ -250,8 +250,43 @@ body {
           color: red;
           font-size: 1.2em; }
     body section#tree .content h3 {
-      font-size: 1.4em;
+      font-size: 1.1em;
       margin-top: 5%; }
+  body section#four .content {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    height: 90vh; }
+    body section#four .content #map, body section#four .content #reservation {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: black; }
+    body section#four .content #reservation span, body section#four .content #reservation h3 {
+      text-align: center;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      -webkit-flex-direction: row;
+      margin: 10%; }
+      body section#four .content #reservation span i, body section#four .content #reservation h3 i {
+        margin-right: 2vw; }
+    body section#four .content #reservation h3 {
+      font-size: 2vw; }
+    body section#four .content #reservation span {
+      font-size: 1.5vw; }
+      body section#four .content #reservation span:nth-child(2) {
+        font-size: 4vw;
+        color: red;
+        font-style: italic;
+        font-weight: 900; }
+  body section#four #footer {
+    height: 10vh; }
 
 @media only screen and (min-width: 801px) {
   body nav #navButton {
@@ -298,7 +333,7 @@ body {
   body section#two .content h3 {
     width: 80%; }
   body section#tree .content #pricesAndHours {
-    height: 50%; }
+    height: 40%; }
     body section#tree .content #pricesAndHours #price, body section#tree .content #pricesAndHours #hour {
       flex-direction: column;
       -webkit-flex-direction: column; }
@@ -311,14 +346,37 @@ body {
       font-size: .7em; }
       body section#tree .content #pricesAndHours #price ul li span {
         font-size: 1.2em; }
-    body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
-      font-size: 1em; }
-    body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
-      color: red;
-      font-weight: 900;
-      font-size: .8em; }
+    body section#tree .content #pricesAndHours #hour ul li {
+      text-align: center; }
+      body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
+        font-size: 1em; }
+      body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
+        color: red;
+        font-weight: 900;
+        font-size: .8em; }
   body section#tree .content h3 {
     width: 90%;
-    text-align: center; } }
+    text-align: center; }
+  body section#four .content {
+    flex-direction: column-reverse; }
+    body section#four .content #map, body section#four .content #reservation {
+      height: 50%;
+      width: 100%; }
+    body section#four .content #reservation h3 {
+      font-size: 5vw; }
+    body section#four .content #reservation span i, body section#four .content #reservation span p {
+      font-size: 4.5vw; } }
+@media only screen and (orientation: landscape) and (max-device-width: 800px) {
+  body nav ul li {
+    flex-direction: row;
+    text-align: left;
+    font-size: .3em; }
+  body section#tree .content #pricesAndHours {
+    height: 60%; }
+  body section#four .content {
+    flex-direction: row; }
+    body section#four .content #map, body section#four .content #reservation {
+      height: 100%;
+      width: 50%; } }
 
 /*# sourceMappingURL=style.css.map */

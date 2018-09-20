@@ -56,21 +56,18 @@ nextSlide.addEventListener('click', plusSlide);
 
 /* --CONNECTING NAVIGATION POINTS WITH SECTION'S DISPLAY-- */
 
-sections[0].classList.add('displayFlex', 'changeEffects');	// set first section to be visible
-
-function changeEffects(index) {				// function adding classes witch changing section
+sections[0].classList.add('displayFlex', 'changeEffects');									// set first section to be visible
+function changeEffects(index) {																// function adding classes with changing sections
 	sections[index].classList.add('changeEffects');
 }								
-function showSection() {							// connect navigation point with correct section by data-set
+function showSection() {																	// connect navigation point with correct section by data-set
 	const index = this.dataset.index;										
 	sections.forEach(section => section.classList.remove('displayFlex', 'changeEffects'));
 	sections[index].classList.add('displayFlex');
-
-	setTimeout(function() {		//active change effects after 50ms
+	setTimeout(function() {																	//active change effects after 50ms
 		changeEffects(index);
 	}, 50);
-
-	if (window.matchMedia("(max-width: 801px)").matches) showNavigation();	//call showNavigation() only under 801px width devices 
+	if (window.matchMedia("(max-width: 801px)").matches) showNavigation();					//call showNavigation() only under 801px width devices 
 }
 navTrigers.forEach( triger => {
 	triger.addEventListener('click',showSection);
