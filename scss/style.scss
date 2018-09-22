@@ -92,17 +92,17 @@ body {
 		-webkit-filter: blur(35px); 
 		transition: .5s;
 		.emptyContent {
-			flex: 2;
+			width: 20%;
 			float: left;
 			transition: .5s;
 		}
 		.emptyContent.hide {
-			flex: 0;
+			width: 0%;
 		}
 		.content {
 			display: flex;
 			display: -webkit-flex;
-			flex: 8;
+			width: 80%;
 			height: 100%;
 			float: right;
 			color: white;		
@@ -272,7 +272,6 @@ body {
 							display: -webkit-flex;
 							flex-direction: row;
 							-webkit-flex-direction: row;
-							justify-content: center;
 							align-items: center;
 							justify-content: space-between;
 							font-weight: 900;
@@ -299,58 +298,53 @@ body {
 					}
 				}
 			}
-			h3 {
-				font-size: 1.1em;
-				margin-top: 5%;
-			}
 		}
 	}
 	section#four {
 		.content {
-				display: flex;
-				flex-direction: row;
-				-webkit-flex-direction: row;
-				height: 90vh;
-			#map, #reservation {
-				height: 100%;
+			flex-direction: row-reverse;
+			-webkit-flex-direction: row-reverse;
+			#location, #reservation {
 				width: 50%;
+				height: 50%;
 				display: flex;
 				display: -webkit-flex;
 				flex-direction: column;
 				-webkit-flex-direction: column;
-				justify-content: center;
-				align-items: center;
 				color: black;
 			}
-			#reservation {
-				span, h3 {
+			#location {
+				justify-content: center;
+				align-items: center;
+				#map {
+					width: 50%;
+					height: 50%;
+				}
+				h4 {
+					width: 90%;
+					margin: 10%;
 					text-align: center;
-					text-transform: uppercase;
+				}
+			}
+			#reservation {
+				justify-content: center;
+				align-items: center;
+				span {
 					display: flex;
+					display: -webkit-flex;
 					flex-direction: row;
 					-webkit-flex-direction: row;
-					margin: 10%;
-					i {
-						margin-right: 2vw;
-					}
-				}
-				h3 {
-					font-size: 2vw;
-				}
-				span {
-					font-size: 1.5vw;
 					&:nth-child(2) {
-						font-size: 4vw;
 						color: red;
-						font-style: italic;
-						font-weight: 900;
+						margin: 20%;
+					}
+					i {
+					}
+					p {
 
 					}
 				}
-			} 
-		}
-		#footer {
-			height: 10vh;
+			}
 		}
 	}
 }
@@ -398,7 +392,7 @@ body {
 				display: none;
 			}
         	.content {
-        		flex: 1;
+        		width: 100%;
         	}
         }
         section#one {
@@ -472,31 +466,27 @@ body {
 						}
 					}
 				}
-				h3 {
-					width: 90%;
-					text-align: center;
-				}
 			}
         }
-		section#four {
+        section#four {
 			.content {
-				flex-direction: column-reverse;
-				#map, #reservation {
-					height: 50%;
+				flex-direction:	column-reverse;
+				-webkit-flex-direction: reverse;
+				#location, #reservation {
 					width: 100%;
+					height: 50%;
 				}
-				#reservation {
-					h3 {
-						font-size: 5vw;
+				#location {
+					#map {
+						width: 70%;
+						height: 70%;
 					}
-					span {
-						i, p {
-							font-size: 4.5vw;
-						}
+					h4 {
+						margin: 5%;
 					}
 				}
-			}
-		}
+			}	
+        }
     }
 }
 
@@ -505,9 +495,9 @@ body {
         nav {
         	ul {
         		li {
-        				flex-direction: row;
-        				text-align: left;
-        				font-size: .3em;
+    				flex-direction: row;
+    				text-align: left;
+    				font-size: .3em;
         		}
         	}
         }
@@ -520,12 +510,22 @@ body {
 		}
 		section#four {
 			.content {
-				flex-direction: row;
-				#map, #reservation {
-					height: 100%;
+				flex-direction:	row-reverse;
+				-webkit-flex-direction: row-reverse;
+				#location, #reservation {
 					width: 50%;
+					height: 100%;
 				}
-			}
-		} 
+				#location {
+					#map {
+						width: 90%;
+						height: 70%;
+					}
+					h4 {
+					margin: 0;
+					}
+				}
+			}	
+		}
     }
 }

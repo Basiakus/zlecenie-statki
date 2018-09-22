@@ -6,7 +6,7 @@ const sections = document.querySelectorAll('section');			// all sections
 const navTrigers = document.querySelectorAll('nav li');			// navigation poits 
 const prevSlide = document.querySelector('.prev');				// prev slide button
 const nextSlide = document.querySelector('.next');				// next slide button
-let slideIndex = 1; 											// current slide in carusel
+let slideIndex = 1;												// current slide in carusel										
 
 
 
@@ -28,7 +28,6 @@ button.addEventListener('click', showNavigation);
 
 
 /* --CARUSEL IN SECTION TWO-- */
-
 
 showSlide(slideIndex);
 
@@ -56,18 +55,19 @@ nextSlide.addEventListener('click', plusSlide);
 
 /* --CONNECTING NAVIGATION POINTS WITH SECTION'S DISPLAY-- */
 
-sections[0].classList.add('displayFlex', 'changeEffects');									// set first section to be visible
-function changeEffects(index) {																// function adding classes with changing sections
+sections[0].classList.add('displayFlex', 'changeEffects');		/*set first section to be visible*/
+function changeEffects(index) {									/*function adding classes with changing sections*/
 	sections[index].classList.add('changeEffects');
 }								
-function showSection() {																	// connect navigation point with correct section by data-set
+function showSection() {										/*connect navigation point with correct section by data-set*/
 	const index = this.dataset.index;										
 	sections.forEach(section => section.classList.remove('displayFlex', 'changeEffects'));
 	sections[index].classList.add('displayFlex');
-	setTimeout(function() {																	//active change effects after 50ms
+	setTimeout(function() {										/*active change effects after 10ms*/																	
 		changeEffects(index);
-	}, 50);
-	if (window.matchMedia("(max-width: 801px)").matches) showNavigation();					//call showNavigation() only under 801px width devices 
+		mapRefresh();											/*correct display of map in section 4 after display changeing*/															
+	}, 10);
+	if (window.matchMedia("(max-width: 801px)").matches) showNavigation();/*call showNavigation() only under 801px width devices*/ 					
 }
 navTrigers.forEach( triger => {
 	triger.addEventListener('click',showSection);
@@ -75,3 +75,26 @@ navTrigers.forEach( triger => {
 
 
 
+/* --ADDING MAP FROM LEAFLETJS.COM-- */
+
+const mymap = L.map('map').setView([53.9074403, 14.2508657], 13);
+
+/*inicialize map*/
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    maxZoom: 20,    
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiYmFzaWFrdXMiLCJhIjoiY2ptY2dtaHU0MDlvNzNrbnp6M2QwNXk0YiJ9.6eUNcDrGgcNhRBAMrMouPw'
+}).addTo(mymap);
+
+/*inicialize marker*/
+const marker = L.marker([53.9074403, 14.2508657])
+	.addTo(mymap)
+	.bindPopup('tutaj jesteśmy');
+
+/*func fixing bug with false size on section load*/
+function mapRefresh() { 	 
+	setTimeout(function() {
+		mymap.invalidateSize();
+		marker.openPopup();
+	}, 20);
+}

@@ -5,6 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+			integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+			crossorigin=""/> <!--map-->
 		<title>Rejsy po Świnoujściu</title>
 	</head>
 	<body>
@@ -169,22 +172,25 @@
 						</ul>
 					</div>
 				</div>
-				<h3>Statek zacumowany jest przy Wybrzeżu Władysława za Muzeum Rybołówstwa Morskiego</h3>
 			</div>
 		</section>
 		<section id="four">
 			<div class="emptyContent"></div>
 			<div class="content">
-				<div id="map"></div>
+				<div id="location">
+					<div id="map"></div>
+					<h4>Statek zacumowany jest przy Wybrzeżu Władysława za Muzeum Rybołówstwa Morskiego</h4>
+				</div>
 				<div id="reservation">
-					<h3>Informacja i rezerwacja</h3>
+					<h2>Informacja i rezerwacja:</h2>
 					<span><i class="fas fa-phone"></i><p>516 333 560</p></span>
 					<span><i class="fas fa-at"></i><p>statki.pasazerskie@gmail.com</p></span>
 				</div>
 			</div>
-			<div id="footer">
-			</div>
 		</section>
+		<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+			integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+			crossorigin=""></script> <!--map-->
 		<script type="text/javascript" src='js/script.js'></script>
 	</body>
 </html>

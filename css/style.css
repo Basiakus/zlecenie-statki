@@ -79,15 +79,15 @@ body {
     -webkit-filter: blur(35px);
     transition: .5s; }
     body section .emptyContent {
-      flex: 2;
+      width: 20%;
       float: left;
       transition: .5s; }
     body section .emptyContent.hide {
-      flex: 0; }
+      width: 0%; }
     body section .content {
       display: flex;
       display: -webkit-flex;
-      flex: 8;
+      width: 80%;
       height: 100%;
       float: right;
       color: white;
@@ -234,7 +234,6 @@ body {
             display: -webkit-flex;
             flex-direction: row;
             -webkit-flex-direction: row;
-            justify-content: center;
             align-items: center;
             justify-content: space-between;
             font-weight: 900; }
@@ -249,44 +248,38 @@ body {
         body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
           color: red;
           font-size: 1.2em; }
-    body section#tree .content h3 {
-      font-size: 1.1em;
-      margin-top: 5%; }
   body section#four .content {
-    display: flex;
-    flex-direction: row;
-    -webkit-flex-direction: row;
-    height: 90vh; }
-    body section#four .content #map, body section#four .content #reservation {
-      height: 100%;
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse; }
+    body section#four .content #location, body section#four .content #reservation {
       width: 50%;
+      height: 50%;
       display: flex;
       display: -webkit-flex;
       flex-direction: column;
       -webkit-flex-direction: column;
-      justify-content: center;
-      align-items: center;
       color: black; }
-    body section#four .content #reservation span, body section#four .content #reservation h3 {
-      text-align: center;
-      text-transform: uppercase;
-      display: flex;
-      flex-direction: row;
-      -webkit-flex-direction: row;
-      margin: 10%; }
-      body section#four .content #reservation span i, body section#four .content #reservation h3 i {
-        margin-right: 2vw; }
-    body section#four .content #reservation h3 {
-      font-size: 2vw; }
-    body section#four .content #reservation span {
-      font-size: 1.5vw; }
-      body section#four .content #reservation span:nth-child(2) {
-        font-size: 4vw;
-        color: red;
-        font-style: italic;
-        font-weight: 900; }
-  body section#four #footer {
-    height: 10vh; }
+    body section#four .content #location {
+      justify-content: center;
+      align-items: center; }
+      body section#four .content #location #map {
+        width: 50%;
+        height: 50%; }
+      body section#four .content #location h4 {
+        width: 90%;
+        margin: 10%;
+        text-align: center; }
+    body section#four .content #reservation {
+      justify-content: center;
+      align-items: center; }
+      body section#four .content #reservation span {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        -webkit-flex-direction: row; }
+        body section#four .content #reservation span:nth-child(2) {
+          color: red;
+          margin: 20%; }
 
 @media only screen and (min-width: 801px) {
   body nav #navButton {
@@ -314,7 +307,7 @@ body {
   body section .emptyContent {
     display: none; }
   body section .content {
-    flex: 1; }
+    width: 100%; }
   body section#one .content h1 {
     font-size: 3em;
     text-align: right;
@@ -354,18 +347,17 @@ body {
         color: red;
         font-weight: 900;
         font-size: .8em; }
-  body section#tree .content h3 {
-    width: 90%;
-    text-align: center; }
   body section#four .content {
-    flex-direction: column-reverse; }
-    body section#four .content #map, body section#four .content #reservation {
-      height: 50%;
-      width: 100%; }
-    body section#four .content #reservation h3 {
-      font-size: 5vw; }
-    body section#four .content #reservation span i, body section#four .content #reservation span p {
-      font-size: 4.5vw; } }
+    flex-direction: column-reverse;
+    -webkit-flex-direction: reverse; }
+    body section#four .content #location, body section#four .content #reservation {
+      width: 100%;
+      height: 50%; }
+    body section#four .content #location #map {
+      width: 70%;
+      height: 70%; }
+    body section#four .content #location h4 {
+      margin: 5%; } }
 @media only screen and (orientation: landscape) and (max-device-width: 800px) {
   body nav ul li {
     flex-direction: row;
@@ -374,9 +366,15 @@ body {
   body section#tree .content #pricesAndHours {
     height: 60%; }
   body section#four .content {
-    flex-direction: row; }
-    body section#four .content #map, body section#four .content #reservation {
-      height: 100%;
-      width: 50%; } }
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse; }
+    body section#four .content #location, body section#four .content #reservation {
+      width: 50%;
+      height: 100%; }
+    body section#four .content #location #map {
+      width: 90%;
+      height: 70%; }
+    body section#four .content #location h4 {
+      margin: 0; } }
 
 /*# sourceMappingURL=style.css.map */
