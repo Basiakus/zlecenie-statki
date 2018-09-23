@@ -25,9 +25,13 @@ body {
 		transition: .5s;
 		z-index: 1;
 		#navButton {
+			display: flex;
+			display: -webkit-flex;
+			align-items: center;
+			justify-content: center;
 			width: 50px;
 			height: 50px;
-			border-radius: 0 10px 10px 0;
+			border-radius: 0 25px 25px 0;
 			background-color: black;
 			opacity: .9;
 			position: absolute;
@@ -35,6 +39,44 @@ body {
 			right: -50px;
 			transition: .5s;
 			margin-left: 0;
+			#compassBody {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 90%;
+				height: 90%;
+				border: 2px solid white;
+				border-radius: 50%;
+				#compassNeedle {
+					display: flex;
+					flex-direction: column;
+					-webkit-flex-direction: column;
+					justify-content: center;
+					width: 15%;
+					height: 95%;
+					transition: all 500ms cubic-bezier(1.000, -0.600, 0.000, 1.650);
+					-webkit-transition: all 500ms cubic-bezier(1.000, -0.600, 0.000, 1.650); 
+					-moz-transition: all 500ms cubic-bezier(1.000, -0.600, 0.000, 1.650);
+					#needleUp {
+						width: 100%;
+						height: 50%;
+						background-color: white;
+						clip-path: polygon(50% 0, 0 100%, 100% 100%);
+					}
+					#needleDown {
+						width: 100%;
+						height: 50%;
+						background-color: red;
+						clip-path: polygon(100% 0, 50% 100%, 0 0);
+					}
+				}
+				#compassNeedle.press {
+					-webkit-transform: rotate(900deg);
+					-webkit-transform-origin: 50% 50%;
+					transform: rotate(900deg);
+					transform-origin: 50% 50%;
+				}
+			}
 		}
 		#navButton.click {
 		}
