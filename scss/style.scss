@@ -43,25 +43,32 @@ body {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				width: 90%;
-				height: 90%;
-				border: 2px solid white;
+				width: 85%;
+				height: 85%;
+				background-color: white;
+				border: 2px solid black;
 				border-radius: 50%;
+				opacity: .8;
 				#compassNeedle {
 					display: flex;
 					flex-direction: column;
 					-webkit-flex-direction: column;
 					justify-content: center;
-					width: 15%;
+					width: 17%;
 					height: 95%;
-					transition: all 500ms cubic-bezier(1.000, -0.600, 0.000, 1.650);
-					-webkit-transition: all 500ms cubic-bezier(1.000, -0.600, 0.000, 1.650); 
-					-moz-transition: all 500ms cubic-bezier(1.000, -0.600, 0.000, 1.650);
+					-webkit-transform: rotate(30deg);
+					-webkit-transform-origin: 50% 50%;
+					transform: rotate(30deg);
+					transform-origin: 50% 50%;
+					transition: all 800ms cubic-bezier(1.000, -0.600, 0.000, 1.650);
+					-webkit-transition: all 800ms cubic-bezier(1.000, -0.600, 0.000, 1.650); 
+					-moz-transition: all 800ms cubic-bezier(1.000, -0.600, 0.000, 1.650);
 					#needleUp {
 						width: 100%;
 						height: 50%;
-						background-color: white;
+						background-color: black;
 						clip-path: polygon(50% 0, 0 100%, 100% 100%);
+
 					}
 					#needleDown {
 						width: 100%;
@@ -71,9 +78,9 @@ body {
 					}
 				}
 				#compassNeedle.press {
-					-webkit-transform: rotate(900deg);
+					-webkit-transform: rotate(930deg);
 					-webkit-transform-origin: 50% 50%;
-					transform: rotate(900deg);
+					transform: rotate(930deg);
 					transform-origin: 50% 50%;
 				}
 			}

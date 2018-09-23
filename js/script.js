@@ -89,7 +89,7 @@ navTrigers.forEach( triger => {
 
 /* --ADDING MAP FROM LEAFLETJS.COM-- */
 
-const mymap = L.map('map').setView([53.9074403, 14.2508657], 13);
+const mymap = L.map('map').setView([53.9077511, 14.2509691], 16.5);
 
 /*inicialize map*/
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
