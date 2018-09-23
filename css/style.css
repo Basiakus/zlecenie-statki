@@ -66,7 +66,8 @@ body {
             width: 100%;
             height: 50%;
             background-color: black;
-            clip-path: polygon(50% 0, 0 100%, 100% 100%); }
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+            -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%); }
           body nav #navButton #compassBody #compassNeedle #needleDown {
             width: 100%;
             height: 50%;
