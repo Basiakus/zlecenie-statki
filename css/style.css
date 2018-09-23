@@ -21,6 +21,7 @@ body {
     display: -webkit-flex;
     align-items: center;
     justify-content: center;
+    -webkit-justify-content: center;
     transition: width .5s;
     z-index: 1; }
     body nav #navButton {
@@ -28,6 +29,8 @@ body {
       display: -webkit-flex;
       align-items: center;
       justify-content: center;
+      -webkit-align-items: center;
+      -webkit-justify-content: center;
       width: 50px;
       height: 50px;
       border-radius: 0 25px 25px 0;
@@ -42,6 +45,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
         width: 85%;
         height: 85%;
         background-color: white;
@@ -50,9 +55,11 @@ body {
         opacity: .8; }
         body nav #navButton #compassBody #compassNeedle {
           display: flex;
+          display: -webkit-flex;
           flex-direction: column;
           -webkit-flex-direction: column;
           justify-content: center;
+          -webkit-justify-content: center;
           width: 17%;
           height: 95%;
           -webkit-transform: rotate(30deg);
@@ -138,6 +145,8 @@ body {
       float: right;
       justify-content: center;
       align-items: center;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
       text-shadow: 2px -1px 2px #000000;
       color: white; }
   body section.changeEffects {
@@ -181,6 +190,8 @@ body {
           -webkit-flex-direction: row;
           justify-content: center;
           align-items: center;
+          -webkit-justify-content: center;
+          -webkit-align-items: center;
           border-radius: 150px;
           border: 4px solid white;
           -webkit-box-shadow: 0px 0px 49px 36px rgba(250, 250, 250, 0.3);
@@ -256,6 +267,8 @@ body {
       display: -webkit-flex;
       justify-content: center;
       align-items: center;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
       width: 100%;
       height: 40%; }
       body section#tree .content #pricesAndHours #price, body section#tree .content #pricesAndHours #hour {
@@ -267,6 +280,8 @@ body {
         -webkit-flex-direction: row;
         justify-content: center;
         align-items: center;
+        -webkit-justify-content: center;
+        -webkit-align-items: center;
         border: 2px solid black;
         border-radius: 5px;
         -webkit-box-shadow: 5px 5px 20px 0px #a399a3;
@@ -286,13 +301,16 @@ body {
             -webkit-flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            -webkit-align-items: center;
+            -webkit-justify-content: space-between;
             font-weight: 900; }
             body section#tree .content #pricesAndHours #price ul li span, body section#tree .content #pricesAndHours #hour ul li span {
               color: red;
               font-size: 1.1em;
               text-transform: capitalize; }
       body section#tree .content #pricesAndHours #hour ul li {
-        justify-content: space-around; }
+        justify-content: space-around;
+        -webkit-justify-content: space-around; }
         body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
           font-size: 1.3em; }
         body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
@@ -311,6 +329,8 @@ body {
       flex-direction: column;
       -webkit-flex-direction: column; }
     body section#four .content #location {
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
       justify-content: center;
       align-items: center; }
       body section#four .content #location #map {
@@ -329,6 +349,8 @@ body {
         font-size: .8em;
         margin-top: 2%; }
     body section#four .content #reservation {
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
       justify-content: center;
       align-items: center; }
       body section#four .content #reservation span {
@@ -337,6 +359,7 @@ body {
         flex-direction: row;
         -webkit-flex-direction: row;
         align-items: baseline;
+        -webkit-align-items: baseline;
         text-transform: uppercase; }
         body section#four .content #reservation span i {
           margin-right: 3%; }
@@ -364,6 +387,8 @@ body {
         padding: 0;
         flex-direction: column;
         justify-content: center;
+        -webkit-justify-content: center;
+        -webkit-flex-direction: column;
         padding: 10%; }
         body nav ul li:last-child i, body nav ul li:last-child span {
           font-size: 3em; }
@@ -391,6 +416,7 @@ body {
     height: 70%; }
     body section#two .content .slideshow-container .mySlides {
       flex-direction: column;
+      -webkit-flex-direction: column;
       border-radius: 100px; }
       body section#two .content .slideshow-container .mySlides .text {
         font-size: 1em; }
@@ -434,6 +460,7 @@ body {
 @media only screen and (orientation: landscape) and (max-device-width: 800px) {
   body nav ul li {
     flex-direction: row;
+    -webkit-flex-direction: row;
     text-align: left;
     font-size: .3em; }
   body section#two .content .slideshow-container {

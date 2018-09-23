@@ -23,6 +23,7 @@ body {
 		display: -webkit-flex;
 		align-items: center;
 		justify-content: center;
+		-webkit-justify-content: center;
 		transition: width .5s;
 		z-index: 1;
 		#navButton {
@@ -30,6 +31,8 @@ body {
 			display: -webkit-flex;
 			align-items: center;
 			justify-content: center;
+			-webkit-align-items: center;
+			-webkit-justify-content: center;
 			width: 50px;
 			height: 50px;
 			border-radius: 0 25px 25px 0;
@@ -44,6 +47,8 @@ body {
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				-webkit-align-items: center;
+				-webkit-justify-content: center;
 				width: 85%;
 				height: 85%;
 				background-color: white;
@@ -52,9 +57,11 @@ body {
 				opacity: .8;
 				#compassNeedle {
 					display: flex;
+					display: -webkit-flex;
 					flex-direction: column;
 					-webkit-flex-direction: column;
 					justify-content: center;
+					-webkit-justify-content: center;
 					width: 17%;
 					height: 95%;
 					-webkit-transform: rotate(30deg);
@@ -159,6 +166,8 @@ body {
 			float: right;		
 			justify-content: center;
 			align-items: center;
+			-webkit-justify-content: center;
+			-webkit-align-items: center;
 			text-shadow: 2px -1px 2px #000000;
 			color: white;
 		}
@@ -211,6 +220,8 @@ body {
 					-webkit-flex-direction: row;
 					justify-content: center;
 					align-items: center;
+					-webkit-justify-content: center;
+					-webkit-align-items: center;
 					border-radius: 150px;
 					border: 4px solid white;
 					-webkit-box-shadow: 0px 0px 49px 36px rgba(250,250,250,0.3);
@@ -298,6 +309,8 @@ body {
 				display: -webkit-flex;
 				justify-content: center;
 				align-items: center;
+				-webkit-justify-content: center;
+				-webkit-align-items: center;
 				width: 100%;
 				height: 40%;
 				#price, #hour {
@@ -309,6 +322,8 @@ body {
 					-webkit-flex-direction: row;
 					justify-content: center;
 					align-items: center;
+					-webkit-justify-content: center;
+					-webkit-align-items: center;
 					border: 2px solid black;
 					border-radius: 5px;
 					-webkit-box-shadow: 5px 5px 20px 0px rgba(163,153,163,1);
@@ -329,6 +344,8 @@ body {
 							-webkit-flex-direction: row;
 							align-items: center;
 							justify-content: space-between;
+							-webkit-align-items: center;
+							-webkit-justify-content: space-between;
 							font-weight: 900;
 							span {
 								color: red;
@@ -342,6 +359,7 @@ body {
 					ul {
 						li {
 							justify-content: space-around;
+							-webkit-justify-content: space-around;
 							&:nth-child(1) {
 								font-size: 1.3em;
 							}
@@ -370,6 +388,8 @@ body {
 				-webkit-flex-direction: column;
 			}
 			#location {
+				-webkit-justify-content: center;
+				-webkit-align-items: center;
 				justify-content: center;
 				align-items: center;
 				#map {
@@ -391,6 +411,8 @@ body {
 				}
 			}
 			#reservation {
+				-webkit-justify-content: center;
+				-webkit-align-items: center;
 				justify-content: center;
 				align-items: center;
 				span {
@@ -399,6 +421,7 @@ body {
 					flex-direction: row;
 					-webkit-flex-direction: row;
 					align-items: baseline;
+					-webkit-align-items: baseline;
 					text-transform: uppercase;
 					i {
 						margin-right: 3%;
@@ -449,6 +472,8 @@ body {
         			}
         			flex-direction: column;
         			justify-content: center;
+					-webkit-justify-content: center;
+					-webkit-flex-direction: column;
         			padding: 10%;
         			i, span {
         				font-size: 3em;
@@ -489,6 +514,7 @@ body {
 					height: 70%;
 					.mySlides {
 						flex-direction: column;
+						-webkit-flex-direction: column;
 						border-radius: 100px;
 						.text {
 							font-size: 1em;
@@ -578,6 +604,7 @@ body {
         	ul {
         		li {
     				flex-direction: row;
+    				-webkit-flex-direction: row;
     				text-align: left;
     				font-size: .3em;
         		}
