@@ -4,6 +4,7 @@ const nav = document.querySelector('nav');						// The navigation
 const button = document.querySelector('#navButton');			// The button in a navigation (mobile devices)
 const compassNeedle = document.querySelector('#compassNeedle')	// The compass-needle in a button
 const sections = document.querySelectorAll('section');			// all the sections
+const emptyContents = document.querySelectorAll('.emptyContent');
 const navTrigers = document.querySelectorAll('nav li');			// navigation poits 
 const prevSlide = document.querySelector('.prev');				// prev slide button
 const nextSlide = document.querySelector('.next');				// next slide button
@@ -11,11 +12,9 @@ let slideIndex = 1;												// current slide in carusel
 
 
 
-/* --NAVBUTTON IN SECTION ONE-- */
+/* --NAVIGATION AND NAVBUTTON IN SECTION ONE-- */
 
 function showNavigation() {					
-	const emptyContents = document.querySelectorAll('.emptyContent');
-
 	/*add classes with animation attributes*/
 	emptyContents.forEach( emptyContent => 
 		(!emptyContent.classList.contains('hide')) ? emptyContent.classList.add('hide') : emptyContent.classList.remove('hide')
@@ -24,8 +23,17 @@ function showNavigation() {
 	(!button.classList.contains('click')) ? button.classList.add('click') : button.classList.remove('click');
 	(!compassNeedle.classList.contains('press')) ? compassNeedle.classList.add('press') : compassNeedle.classList.remove('press');
 }
-button.addEventListener('click', showNavigation);
 
+button.addEventListener('click', showNavigation);
+/*corrects display on changing orientation devices width from less than 1024px to more than 1024 and and vice versa */
+window.addEventListener('resize', function() {
+	if(nav.classList.contains('off')) {
+		nav.classList.remove('off');
+		emptyContents.forEach( content => (content.classList.contains('hide')) ? 
+			content.classList.remove('hide') : 
+			content.classList.remove(''))
+	}
+})
 
 
 /* --CARUSEL IN SECTION TWO-- */
@@ -77,9 +85,7 @@ function showSection() {
 		changeEffects(index);
 		mapRefresh();/*correct display of map in section 4 after display changeing*/																										
 	}, 10);
-
-	/*call showNavigation() only under 801px width devices*/
-	if (window.matchMedia("(max-width: 801px)").matches) showNavigation(); 					
+	//if (window.matchMedia("(orientation: landscape) and (max-device-width: 1024px)").matches) showNavigation(); 					
 }
 navTrigers.forEach( triger => {
 	triger.addEventListener('click',showSection);
