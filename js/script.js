@@ -15,26 +15,26 @@ let slideIndex = 1;												// current slide in carusel
 /* --NAVIGATION AND NAVBUTTON IN SECTION ONE-- */
 
 function showNavigation() {					
+	if(window.screen.availWidth > 1023) return;
 	/*add classes with animation attributes*/
 	emptyContents.forEach( emptyContent => 
 		(!emptyContent.classList.contains('hide')) ? emptyContent.classList.add('hide') : emptyContent.classList.remove('hide')
 	);
 	(!nav.classList.contains('off')) ? nav.classList.add('off') : nav.classList.remove('off');
-	(!button.classList.contains('click')) ? button.classList.add('click') : button.classList.remove('click');
 	(!compassNeedle.classList.contains('press')) ? compassNeedle.classList.add('press') : compassNeedle.classList.remove('press');
 }
 
 button.addEventListener('click', showNavigation);
-/*corrects display on changing orientation devices width from less than 1024px to more than 1024 and and vice versa */
+/*corrects display on changing orientation devices from less than 1024px to more than 1024 and and vice versa */
 window.addEventListener('resize', function() {
 	if(nav.classList.contains('off')) {
+		console.log('bomba');
 		nav.classList.remove('off');
 		emptyContents.forEach( content => (content.classList.contains('hide')) ? 
 			content.classList.remove('hide') : 
 			content.classList.remove(''))
 	}
 })
-
 
 /* --CARUSEL IN SECTION TWO-- */
 
@@ -85,7 +85,7 @@ function showSection() {
 		changeEffects(index);
 		mapRefresh();/*correct display of map in section 4 after display changeing*/																										
 	}, 10);
-	//if (window.matchMedia("(orientation: landscape) and (max-device-width: 1024px)").matches) showNavigation(); 					
+	showNavigation();					
 }
 navTrigers.forEach( triger => {
 	triger.addEventListener('click',showSection);

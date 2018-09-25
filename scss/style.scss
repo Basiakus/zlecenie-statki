@@ -298,21 +298,18 @@ body {
 	}
 	section#tree {
 		.content {
-			font-weight: 100;
 			#pricesAndHours {
 				display: flex;
 				display: -webkit-flex;
-				justify-content: center;
-				-webkit-justify-content: center;
 				width: 100%;
 				height: 60%;
 				#price, #hour {
 					position: relative;
-					flex:1;
-					height: 100%;
+					flex: 1;
 					display: flex;
 					display: -webkit-flex;
 					flex-direction: column;
+					-webkit-flex-direction: column;
 					color: black;
 					background-color: white;
 					border-radius: 30px;
@@ -320,7 +317,6 @@ body {
 					font-size: 1.7em;
 					text-align: center;
 					border: 5px solid black;
-					-webkit-flex-direction: column;
 					justify-content: flex-end;
 					align-items: center;
 					-webkit-justify-content: flex-end;
@@ -375,6 +371,7 @@ body {
 				}
 				#hour {
 					ul {
+						margin-right: 3%;
 						li {
 							justify-content: space-around;
 							-webkit-justify-content: space-around;
@@ -469,7 +466,7 @@ body {
 		}
 	}
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 786px) {
     body {
         nav {
         	width: 30vw;
@@ -544,27 +541,60 @@ body {
 	        	}        		
         	}
         }
-        section#tree {
-        	.content {
+		section#tree {
+			.content {
 				#pricesAndHours {
-					height: 40%;
+					width: 100%;
+					height: 100%;
+					flex-direction: column-reverse;
+					-webkit-flex-direction: column-reverse;
 					#price, #hour {
-						flex-direction: column;
-						-webkit-flex-direction: column;
-						i {
-							font-size: 4em;
+						border-radius: 30px;
+						border: 2px solid black;
+						margin: 15%;
+						justify-content: center;
+						-webkit-justify-content: center;
+						-webkit-align-items: center;
+						align-items: center;
+						-webkit-box-shadow: 10px 10px 10px -1px rgba(128,121,128,1);
+						-moz-box-shadow: 10px 10px 10px -1px rgba(128,121,128,1);
+						box-shadow: 10px 10px 10px -1px rgba(128,121,128,1);
+						.iconRound {
+							top: -10%;
+							left: -10%;
+							display: flex;
+							display: -webkit-flex;
+							justify-content: center;
+							align-items: center;
+							-webkit-justify-content: center;
+							-webkit-align-items: center;
+							width: 80px;
+							height: 80px;
+							border-radius: 50%;
+							background-color: black;
+							opacity: .9;
+							border: 2px solid white;
+							-webkit-box-shadow: 10px 30px 30px -10px rgba(128,121,128,1);
+							i {
+								font-size: 1.5em;
+								color: white
+							}				
 						}
 						ul {
-							width: 90%;
-						}
-					}
-					#price {
-						ul {
+							display: flex;
+							display: -webkit-flex;
+							width: 65%;
+							height: 60%;
+							margin-bottom: 0%;
+							justify-content: space-between;
+							-webkit-justify-content: space-between;
+							flex-direction: column;
+							-webkit-flex-direction: column;
+							font-size: .6em;
 							li {
-								margin: 3% 0;
-								font-size: .7em;
+
 								span {
-									font-size: 1.2em;
+									font-size: 1.1em;
 								}
 							}
 						}
@@ -572,21 +602,17 @@ body {
 					#hour {
 						ul {
 							li {
-								text-align: center;
 								&:nth-child(1) {
 									font-size: 1em;
 								}
 								&:nth-child(2), &:nth-child(3) {
-									color: red;
-									font-weight: 900;
-									font-size: .8em;
 								}
 							}
 						}
 					}
 				}
 			}
-        }
+		}
         section#four {
 			.content {
 				flex-direction:	column-reverse;
@@ -616,7 +642,7 @@ body {
     }
 }
 
-@media only screen and (orientation: landscape) and (max-device-width: 1023px)  {
+@media only screen and (orientation: landscape) and (max-device-width: 768px)  {
     body {
         nav {
         	ul {
