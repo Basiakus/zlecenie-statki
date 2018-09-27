@@ -304,7 +304,7 @@ body {
           font-size: 2.5em;
           color: white; }
       body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
-        width: 90%;
+        width: 70%;
         list-style-type: none;
         margin-bottom: 2%; }
         body section#tree .content #pricesAndHours #price ul li, body section#tree .content #pricesAndHours #hour ul li {
@@ -313,15 +313,23 @@ body {
           flex-direction: row;
           -webkit-flex-direction: row;
           align-items: center;
-          justify-content: space-between;
           -webkit-align-items: center;
+          justify-content: space-between;
           -webkit-justify-content: space-between;
           margin: 5% 0; }
           body section#tree .content #pricesAndHours #price ul li span, body section#tree .content #pricesAndHours #hour ul li span {
-            align-items: baseline;
+            display: flex;
+            align-items: center;
+            -webkit-align-items: center;
+            text-transform: uppercase;
+            flex-direction: row;
+            -webkit-flex-direction: row; }
+          body section#tree .content #pricesAndHours #price ul li span.agePrice, body section#tree .content #pricesAndHours #hour ul li span.agePrice {
             color: red;
-            text-transform: capitalize;
-            font-size: 1.3em; }
+            font-size: 1.3em;
+            text-transform: lowercase; }
+          body section#tree .content #pricesAndHours #price ul li span.ageInfo, body section#tree .content #pricesAndHours #hour ul li span.ageInfo {
+            font-size: .5em; }
     body section#tree .content #pricesAndHours #hour ul {
       margin-right: 3%; }
       body section#tree .content #pricesAndHours #hour ul li {
@@ -484,8 +492,8 @@ body {
         flex-direction: column;
         -webkit-flex-direction: column;
         font-size: .6em; }
-        body section#tree .content #pricesAndHours #price ul li span, body section#tree .content #pricesAndHours #hour ul li span {
-          font-size: 1.1em; }
+        body section#tree .content #pricesAndHours #price ul li, body section#tree .content #pricesAndHours #hour ul li {
+          margin: 0; }
     body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
       font-size: 1em; }
   body section#four .content {
@@ -516,7 +524,42 @@ body {
     width: 100%;
     font-size: 1em; }
   body section#tree .content #pricesAndHours {
-    height: 60%; }
+    width: 80%;
+    height: 90%; }
+    body section#tree .content #pricesAndHours #price, body section#tree .content #pricesAndHours #hour {
+      flex-direction: row;
+      -webkit-flex-direction: row;
+      border-radius: 20px;
+      font-size: 2em;
+      border: 3px solid black;
+      margin: 2%;
+      -webkit-box-shadow: 5px 10px 20px -5px #807980;
+      -moz-box-shadow: 5px 10px 20px -5px #807980;
+      box-shadow: 5px 10px 20px -5px #807980; }
+      body section#tree .content #pricesAndHours #price .iconRound, body section#tree .content #pricesAndHours #hour .iconRound {
+        top: 15%;
+        left: -3%;
+        width: 80px;
+        height: 80px;
+        border: 3px solid white;
+        -webkit-box-shadow: 5px 10px 20px -5px #8f8f8f;
+        box-shadow: 5px 10px 20px -5px #8f8f8f; }
+        body section#tree .content #pricesAndHours #price .iconRound i, body section#tree .content #pricesAndHours #hour .iconRound i {
+          font-size: 1em; }
+      body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
+        height: 95%;
+        width: 60%;
+        margin: 0; }
+    body section#tree .content #pricesAndHours #hour ul {
+      margin-right: 0%; }
+      body section#tree .content #pricesAndHours #hour ul li {
+        justify-content: space-around;
+        -webkit-justify-content: space-around; }
+        body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
+          font-size: 1.3em; }
+        body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
+          font-size: 1.3em;
+          color: red; }
   body section#four .content {
     flex-direction: row-reverse;
     -webkit-flex-direction: row-reverse; }
