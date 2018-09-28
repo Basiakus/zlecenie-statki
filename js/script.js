@@ -25,10 +25,9 @@ function showNavigation() {
 }
 
 button.addEventListener('click', showNavigation);
-/*corrects display on changing orientation devices from less than 1024px to more than 1024 and and vice versa */
+/*corrects display navigation on changing orientation devices from less than 1024px to more than 1024 and and vice versa */
 window.addEventListener('resize', function() {
-	if(nav.classList.contains('off')) {
-		console.log('bomba');
+	if((nav.classList.contains('off')) && (screen.width > 768)) {
 		nav.classList.remove('off');
 		emptyContents.forEach( content => (content.classList.contains('hide')) ? 
 			content.classList.remove('hide') : 
