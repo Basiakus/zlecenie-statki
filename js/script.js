@@ -116,3 +116,15 @@ function mapRefresh() {
 		marker.openPopup();
 	}, 20);
 }
+
+
+
+
+
+
+window.addEventListener("load",() => {
+	setTimeout(() => {
+		loadingPage.classList.add('pageLoaded');
+		setTimeout(() => loadingPage.style.display = 'none', 500);
+	}, 1000);
+}); //loading of all external stuff is done

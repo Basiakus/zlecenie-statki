@@ -11,6 +11,89 @@ body {
 	height: 100%;
 	font-family: 'Kalam', cursive;
 	background-color: #F8FAD7;
+	#loadingPage {
+		display: flex;
+		display: -webkit-flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		-webkit-align-items: center;
+		-webkit-justify-content: center;
+		-webkit-flex-direction: column;
+		width: 100vw;
+		height: 100vh;
+		background-color: #F8FAD7;
+		color: white;
+		position: absolute;
+		z-index: 20;
+		transition: opacity .5s;
+		#loader {
+			position: absolute;
+			width: 8vmax;
+			height: 8vmax;
+			border-right: 2px solid red;
+			border-radius: 100%;
+			animation: spinRight 1000ms linear infinite;
+			&:before, &:after {
+				content: '';
+				width: 5vmax;
+				height: 5vmax;
+				display: block;
+				position: absolute;
+				top: calc(50% - 2.5vmax);
+				left: calc(50% - 2.5vmax);
+				border-left: 2px solid black;
+				border-radius: 100%;
+				animation: spinLeft 800ms linear infinite;
+			}
+			&:after {
+				width: 2vmax;
+				height: 2vmax;
+				top: calc(50% - 1vmax);
+				left: calc(50% - 1vmax);
+				border: 0;
+				border-right: 2px solid purple;
+				animation: none;
+			}
+			@keyframes spinLeft {
+				from {transform:rotate(0deg);}
+				to {transform:rotate(720deg);}
+			}
+
+			@keyframes spinRight {
+				from {transform:rotate(360deg);}
+				to {transform:rotate(0deg);}
+			}
+			@-webkit-keyframes spinLeft {
+				from {transform:rotate(0deg);}
+				to {transform:rotate(720deg);}
+			}
+
+			@-webkit-keyframes spinRight {
+				from {transform:rotate(360deg);}
+				to {transform:rotate(0deg);}
+			}
+		}
+		h1	{
+			color: black;
+			animation: changeColor 600ms linear infinite;
+			font-size: 1.2em;
+			letter-spacing: 2px;
+		}
+		@keyframes changeColor {
+			0%   {color:black; transform: scale(1);opacity: .6}
+			50%  {color:red; transform: scale(1.1);opacity: .3;}
+			100% {color:purple; transform: scale(1);opacity: .6;}
+		}
+		@-webkit-keyframes changeColor {
+			0%   {color:black; transform: scale(1);opacity: .6}
+			30%  {color:red; transform: scale(1.1);opacity: .3;}
+			100% {color:purple; transform: scale(1);opacity: .6;}
+		}
+	}
+	#loadingPage.pageLoaded {
+		opacity: 0;
+	}
 	nav {
 		position: fixed;
 		top: 0;
@@ -327,7 +410,7 @@ body {
 					box-shadow: 16px 17px 57px -1px rgba(128,121,128,1);
 					.iconRound {
 						position: absolute;
-						top: -15%;
+						top: 5%;
 						display: flex;
 						display: -webkit-flex;
 						justify-content: center;
@@ -340,7 +423,8 @@ body {
 						background-color: black;
 						opacity: .9;
 						border: 5px solid white;
-						-webkit-box-shadow: 0px 60px 50px -30px rgba(143,143,143,1);
+						box-shadow: 16px 17px 57px -1px rgba(143,143,143,1);
+						-webkit-box-shadow: 16px 17px 57px -1px rgba(143,143,143,1);
 						i {
 							font-size: 2.5em;
 							color: white
@@ -705,7 +789,7 @@ body {
 						}
 						ul {
 							height: 95%;
-							width: 60%;
+							width: 50%;
 							margin: 0;
 						}
 					}
