@@ -42,7 +42,8 @@ body {
         left: calc(50% - 2.5vmax);
         border-left: 2px solid black;
         border-radius: 100%;
-        animation: spinLeft 800ms linear infinite; }
+        animation: spinLeft 800ms linear infinite;
+        -webkit-animation: spinLeft 800ms linear infinite; }
       body #loadingPage #loader:after {
         width: 2vmax;
         height: 2vmax;
@@ -74,6 +75,7 @@ body {
     body #loadingPage h1 {
       color: black;
       animation: changeColor 600ms linear infinite;
+      -webkit-animation: changeColor 600ms linear infinite;
       font-size: 1.2em;
       letter-spacing: 2px; }
 @keyframes changeColor {
@@ -128,7 +130,7 @@ body {
       -webkit-justify-content: center;
       width: 50px;
       height: 50px;
-      border-radius: 0 25px 25px 0;
+      border-radius: 0 50% 50% 0;
       background-color: black;
       opacity: .9;
       position: absolute;
@@ -142,8 +144,8 @@ body {
         align-items: center;
         -webkit-align-items: center;
         -webkit-justify-content: center;
-        width: 85%;
-        height: 85%;
+        width: 95%;
+        height: 95%;
         background-color: white;
         border: 2px solid black;
         border-radius: 50%;
@@ -332,21 +334,24 @@ body {
   to {
     opacity: .9; } }
         body section#two .content .slideshow-container .prev, body section#two .content .slideshow-container .next {
+          width: 5%;
+          height: 10%;
           cursor: pointer;
           position: absolute;
-          top: 50%;
-          width: auto;
-          padding: 16px;
-          margin-top: -22px;
+          top: 45%;
           color: white;
           font-weight: bold;
-          font-size: 1.5em;
-          transition: 0.3s ease; }
-          body section#two .content .slideshow-container .prev:hover, body section#two .content .slideshow-container .next:hover {
-            transform: scale(1.5); }
+          font-size: 2em;
+          margin: 0 2%;
+          transition: 0.3s ease;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none; }
+          body section#two .content .slideshow-container .prev:active, body section#two .content .slideshow-container .next:active {
+            transform: scale(0.9); }
         body section#two .content .slideshow-container .next {
-          right: 0;
-          border-radius: 3px 0 0 3px; }
+          right: 0; }
       body section#two .content h3 {
         margin-top: 5%;
         text-transform: uppercase;
@@ -420,82 +425,97 @@ body {
             text-transform: uppercase;
             flex-direction: row;
             -webkit-flex-direction: row; }
+            body section#tree .content #pricesAndHours #price ul li span:nth-child(1), body section#tree .content #pricesAndHours #hour ul li span:nth-child(1) {
+              flex: 2; }
+            body section#tree .content #pricesAndHours #price ul li span:nth-child(2), body section#tree .content #pricesAndHours #hour ul li span:nth-child(2) {
+              flex: 1; }
           body section#tree .content #pricesAndHours #price ul li span.agePrice, body section#tree .content #pricesAndHours #hour ul li span.agePrice {
             color: red;
-            font-size: 1.3em;
-            text-transform: lowercase; }
+            font-size: 1.1em;
+            text-transform: lowercase;
+            justify-content: flex-end;
+            -webkit-justify-content: flex-end; }
           body section#tree .content #pricesAndHours #price ul li span.ageInfo, body section#tree .content #pricesAndHours #hour ul li span.ageInfo {
+            margin-left: 2%;
             font-size: .5em; }
-    body section#tree .content #pricesAndHours #hour ul {
-      margin-right: 3%; }
-      body section#tree .content #pricesAndHours #hour ul li {
-        justify-content: space-around;
-        -webkit-justify-content: space-around; }
-        body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
-          font-size: 1.3em; }
-        body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
-          font-size: 1.3em;
-          color: red; }
-  body section#four .content {
-    flex-direction: row-reverse;
-    -webkit-flex-direction: row-reverse;
-    color: black;
-    text-shadow: 2px 1px 1px #FFFFFF; }
-    body section#four .content #location, body section#four .content #reservation {
-      width: 50%;
-      height: 80%;
-      display: flex;
-      display: -webkit-flex;
-      flex-direction: column;
-      -webkit-flex-direction: column; }
-    body section#four .content #location {
-      -webkit-justify-content: center;
-      -webkit-align-items: center;
+    body section#tree .content #pricesAndHours #hour ul li {
       justify-content: center;
-      align-items: center; }
-      body section#four .content #location #map {
-        width: 70%;
-        height: 70%;
-        border-radius: 20px;
-        border: 7px solid white;
-        -webkit-box-shadow: 10px 10px 30px -10px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 77px -6px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 77px -6px rgba(0, 0, 0, 0.75); }
-      body section#four .content #location h4 {
-        width: 70%;
-        text-align: center;
-        text-transform: uppercase;
-        line-height: 110%;
-        font-size: .8em;
-        margin-top: 2%; }
-    body section#four .content #reservation {
-      -webkit-justify-content: center;
-      -webkit-align-items: center;
-      justify-content: center;
-      align-items: center; }
-      body section#four .content #reservation span {
+      -webkit-justify-content: center; }
+      body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
+        font-size: 1.3em; }
+      body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
+        font-size: 1.3em;
+        color: red; }
+        body section#tree .content #pricesAndHours #hour ul li:nth-child(2) sup, body section#tree .content #pricesAndHours #hour ul li:nth-child(3) sup {
+          font-size: .6em;
+          padding-bottom: 5%;
+          margin: 0 2%; }
+  body section#four {
+    height: 92vh; }
+    body section#four .content {
+      flex-direction: row-reverse;
+      -webkit-flex-direction: row-reverse;
+      color: black;
+      text-shadow: 2px 1px 1px #FFFFFF; }
+      body section#four .content #location, body section#four .content #reservation {
+        width: 50%;
+        height: 90%;
         display: flex;
         display: -webkit-flex;
-        flex-direction: row;
-        -webkit-flex-direction: row;
-        align-items: baseline;
-        -webkit-align-items: baseline;
-        text-transform: uppercase; }
-        body section#four .content #reservation span i {
-          margin-right: 3%; }
-        body section#four .content #reservation span:nth-child(2) {
-          color: red;
-          margin: 10%;
-          font-size: 2.5em; }
-          body section#four .content #reservation span:nth-child(2) p {
-            letter-spacing: 2px; }
-        body section#four .content #reservation span:nth-child(3) {
-          font-size: 1.5em; }
+        flex-direction: column;
+        -webkit-flex-direction: column; }
+      body section#four .content #location {
+        -webkit-justify-content: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        align-items: center; }
+        body section#four .content #location #map {
+          width: 70%;
+          height: 70%;
+          border-radius: 20px;
+          border: 7px solid white;
+          -webkit-box-shadow: 10px 10px 30px -10px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 0px 77px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 77px -6px rgba(0, 0, 0, 0.75); }
+        body section#four .content #location h4 {
+          width: 70%;
+          text-align: center;
+          text-transform: uppercase;
+          line-height: 110%;
+          font-size: .8em;
+          margin-top: 2%; }
+      body section#four .content #reservation {
+        -webkit-justify-content: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        align-items: center; }
+        body section#four .content #reservation span {
+          display: flex;
+          display: -webkit-flex;
+          flex-direction: row;
+          -webkit-flex-direction: row;
+          align-items: baseline;
+          -webkit-align-items: baseline;
+          text-transform: uppercase; }
+          body section#four .content #reservation span i {
+            margin-right: 3%; }
+          body section#four .content #reservation span:nth-child(2) {
+            color: red;
+            margin: 10%;
+            font-size: 2.5em; }
+            body section#four .content #reservation span:nth-child(2) p {
+              letter-spacing: 2px; }
+          body section#four .content #reservation span:nth-child(3) {
+            font-size: 1.3em; }
+    body section#four #footer {
+      position: absolute;
+      height: 8vh;
+      width: 100vw;
+      bottom: calc(0% - 8vh);
+      left: 0;
+      background-color: black; }
 
-@media only screen and (min-width: 1024px) {
-  body nav #navButton {
-    display: none; } }
-@media only screen and (max-width: 786px) {
+@media only screen and (max-width: 768px) {
   body nav {
     width: 30vw; }
     body nav ul {
@@ -543,14 +563,14 @@ body {
   body section#two .content h3 {
     width: 90%; }
   body section#tree .content #pricesAndHours {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     flex-direction: column-reverse;
     -webkit-flex-direction: column-reverse; }
     body section#tree .content #pricesAndHours #price, body section#tree .content #pricesAndHours #hour {
       border-radius: 30px;
       border: 2px solid black;
-      margin: 15%;
+      margin: 5% 0;
       justify-content: center;
       -webkit-justify-content: center;
       -webkit-align-items: center;
@@ -590,6 +610,8 @@ body {
         font-size: .6em; }
         body section#tree .content #pricesAndHours #price ul li, body section#tree .content #pricesAndHours #hour ul li {
           margin: 0; }
+    body section#tree .content #pricesAndHours #price {
+      z-index: 2; }
     body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
       font-size: 1em; }
   body section#four .content {
@@ -601,8 +623,10 @@ body {
     body section#four .content #reservation span:nth-child(3) {
       font-size: 1.1em; }
     body section#four .content #location #map {
-      width: 70%;
-      height: 70%; }
+      width: 98%;
+      height: 98%;
+      border-radius: 3px;
+      border: 2px solid white; }
     body section#four .content #location h4 {
       margin: 5%; } }
 @media only screen and (orientation: landscape) and (max-device-width: 768px) {
@@ -621,22 +645,21 @@ body {
     font-size: 1em; }
   body section#tree .content #pricesAndHours {
     width: 80%;
-    height: 90%; }
+    height: 70%;
+    flex-direction: row;
+    -webkit-flex-direction: row; }
     body section#tree .content #pricesAndHours #price, body section#tree .content #pricesAndHours #hour {
-      flex-direction: row;
-      -webkit-flex-direction: row;
       border-radius: 20px;
-      font-size: 2em;
+      font-size: 1.8em;
       border: 3px solid black;
       margin: 2%;
       -webkit-box-shadow: 5px 10px 20px -5px #807980;
       -moz-box-shadow: 5px 10px 20px -5px #807980;
       box-shadow: 5px 10px 20px -5px #807980; }
       body section#tree .content #pricesAndHours #price .iconRound, body section#tree .content #pricesAndHours #hour .iconRound {
-        top: 15%;
-        left: -3%;
-        width: 80px;
-        height: 80px;
+        left: calc(50% - 45px);
+        width: 90px;
+        height: 90px;
         border: 3px solid white;
         -webkit-box-shadow: 5px 10px 20px -5px #8f8f8f;
         box-shadow: 5px 10px 20px -5px #8f8f8f; }
@@ -644,18 +667,19 @@ body {
           font-size: 1em; }
       body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
         height: 95%;
-        width: 50%;
-        margin: 0; }
+        width: 95%;
+        margin-top: 30%;
+        justify-content: center;
+        -webkit-justify-content: center; }
+        body section#tree .content #pricesAndHours #price ul li, body section#tree .content #pricesAndHours #hour ul li {
+          margin: 2% 0; }
     body section#tree .content #pricesAndHours #hour ul {
       margin-right: 0%; }
-      body section#tree .content #pricesAndHours #hour ul li {
-        justify-content: space-around;
-        -webkit-justify-content: space-around; }
-        body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
-          font-size: 1.3em; }
-        body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
-          font-size: 1.3em;
-          color: red; }
+      body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
+        font-size: 1.1em; }
+      body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
+        font-size: 1.1em;
+        color: red; }
   body section#four .content {
     flex-direction: row-reverse;
     -webkit-flex-direction: row-reverse; }
@@ -667,5 +691,39 @@ body {
       height: 70%; }
     body section#four .content #location h4 {
       margin-top: 5%; } }
+@media only screen and (orientation: portrait) and (min-device-width: 768px) {
+  body nav ul li {
+    font-size: 1.3vw; }
+  body section#one .content h1 {
+    font-size: 9em;
+    text-align: center;
+    margin-bottom: 10%; }
+  body section#one .content p {
+    width: 80%;
+    font-size: 2em;
+    text-align: justify;
+    text-transform: uppercase;
+    line-height: 1.8; }
+  body section#two .content .slideshow-container {
+    width: 90%;
+    height: 80%; }
+    body section#two .content .slideshow-container .mySlides {
+      flex-direction: column;
+      -webkit-flex-direction: column; }
+      body section#two .content .slideshow-container .mySlides .numbertext, body section#two .content .slideshow-container .mySlides .text {
+        font-size: 2.5em; }
+      body section#two .content .slideshow-container .mySlides img {
+        margin: 5%; } }
+@media only screen and (min-width: 768px) {
+  body nav #navButton {
+    width: 80px;
+    height: 80px;
+    right: -80px; }
+    body nav #navButton #compassBody {
+      width: 98%;
+      height: 98%; } }
+@media only screen and (min-width: 1024px) {
+  body nav #navButton {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

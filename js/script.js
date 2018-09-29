@@ -25,7 +25,7 @@ function showNavigation() {
 }
 
 button.addEventListener('click', showNavigation);
-/*corrects display navigation on changing orientation devices from less than 1024px to more than 1024 and and vice versa */
+/*corrects display navigation on changing orientation devices */
 window.addEventListener('resize', function() {
 	if((nav.classList.contains('off')) && (screen.width > 768)) {
 		nav.classList.remove('off');
@@ -118,12 +118,12 @@ function mapRefresh() {
 
 
 
+/* --LOADING PAGE-- */
 
-
-
+/*loading of all external stuff is done*/
 window.addEventListener("load",() => {
 	setTimeout(() => {
 		loadingPage.classList.add('pageLoaded');
 		setTimeout(() => loadingPage.style.display = 'none', 500);
-	}, 1000);
-}); //loading of all external stuff is done
+	}, 1);
+}); 

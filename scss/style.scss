@@ -45,6 +45,7 @@ body {
 				border-left: 2px solid black;
 				border-radius: 100%;
 				animation: spinLeft 800ms linear infinite;
+				-webkit-animation: spinLeft 800ms linear infinite;
 			}
 			&:after {
 				width: 2vmax;
@@ -77,6 +78,7 @@ body {
 		h1	{
 			color: black;
 			animation: changeColor 600ms linear infinite;
+			-webkit-animation: changeColor 600ms linear infinite;
 			font-size: 1.2em;
 			letter-spacing: 2px;
 		}
@@ -118,7 +120,7 @@ body {
 			-webkit-justify-content: center;
 			width: 50px;
 			height: 50px;
-			border-radius: 0 25px 25px 0;
+			border-radius: 0 50% 50% 0;
 			background-color: black;
 			opacity: .9;
 			position: absolute;
@@ -132,8 +134,8 @@ body {
 				align-items: center;
 				-webkit-align-items: center;
 				-webkit-justify-content: center;
-				width: 85%;
-				height: 85%;
+				width: 95%;
+				height: 95%;
 				background-color: white;
 				border: 2px solid black;
 				border-radius: 50%;
@@ -352,23 +354,26 @@ body {
 					to {opacity: .9}
 				}
 				.prev, .next {
+					width: 5%;
+					height: 10%;
 					cursor: pointer;
 					position: absolute;
-					top: 50%;
-					width: auto;
-					padding: 16px;
-					margin-top: -22px;
+					top: 45%;
 					color: white;
 					font-weight: bold;
-					font-size: 1.5em;
+					font-size: 2em;
+					margin: 0 2%;
 					transition: 0.3s ease;
-					&:hover {
-						transform: scale(1.5);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					user-select: none;  
+					&:active {
+						transform: scale(.9);
 					}
 				}
 				.next {
 					right: 0;
-					border-radius: 3px 0 0 3px;
 				}
 			}
 			h3 {
@@ -451,13 +456,23 @@ body {
 								text-transform: uppercase;							
 								flex-direction: row;
 								-webkit-flex-direction: row;
+								&:nth-child(1) {
+									flex: 2;
+								}
+								&:nth-child(2) {
+									flex: 1;
+								}
 							}
 							span.agePrice {
-							color: red;
-								font-size: 1.3em;
+								color: red;
+								font-size: 1.1em;
 								text-transform: lowercase;
+								justify-content: flex-end;
+								-webkit-justify-content: flex-end;
+								
 							}
 							span.ageInfo {
+								margin-left: 2%;
 								font-size: .5em;
 							}
 						}
@@ -465,16 +480,20 @@ body {
 				}
 				#hour {
 					ul {
-						margin-right: 3%;
 						li {
-							justify-content: space-around;
-							-webkit-justify-content: space-around;
+							justify-content: center;
+							-webkit-justify-content: center;
 							&:nth-child(1) {
 								font-size: 1.3em;
 							}
 							&:nth-child(2), &:nth-child(3) {
 								font-size: 1.3em;
 								color: red;
+								sup {
+									font-size: .6em;
+									padding-bottom: 5%;
+									margin: 0 2%; 
+								}
 							}
 						}
 					}
@@ -483,6 +502,7 @@ body {
 		}
 	}
 	section#four {
+			height: 92vh;
 		.content {
 			flex-direction: row-reverse;
 			-webkit-flex-direction: row-reverse;
@@ -490,7 +510,7 @@ body {
 			text-shadow: 2px 1px 1px #FFFFFF;
 			#location, #reservation {
 				width: 50%;
-				height: 80%;
+				height: 90%;
 				display: flex;
 				display: -webkit-flex;
 				flex-direction: column;
@@ -544,23 +564,22 @@ body {
 						}
 					}
 					&:nth-child(3) {
-						font-size: 1.5em;
+						font-size: 1.3em;
 					}
 				}
 			}
 		}
-	}
-}
-@media only screen and (min-width: 1024px) {
-	body {
-		nav {
-			#navButton {
-				display: none;
-			}
+		#footer {
+			position: absolute;
+			height: 8vh;
+			width: 100vw;
+			bottom: calc(0% - 8vh);
+			left: 0;
+			background-color: black;
 		}
 	}
 }
-@media only screen and (max-width: 786px) {
+@media only screen and (max-width: 768px) {
     body {
         nav {
         	width: 30vw;
@@ -638,14 +657,14 @@ body {
 		section#tree {
 			.content {
 				#pricesAndHours {
-					width: 100%;
-					height: 100%;
+					width: 80%;
+					height: 80%;
 					flex-direction: column-reverse;
 					-webkit-flex-direction: column-reverse;
 					#price, #hour {
 						border-radius: 30px;
 						border: 2px solid black;
-						margin: 15%;
+						margin: 5% 0;
 						justify-content: center;
 						-webkit-justify-content: center;
 						-webkit-align-items: center;
@@ -690,6 +709,9 @@ body {
 							}
 						}
 					}
+					#price {
+						z-index: 2;
+					}
 					#hour {
 						ul {
 							li {
@@ -721,8 +743,11 @@ body {
 				}
 				#location {
 					#map {
-						width: 70%;
-						height: 70%;
+						width: 98%;
+						height: 98%;
+						border-radius: 3px;
+						border: 2px solid white;
+
 					}
 					h4 {
 						margin: 5%;
@@ -764,22 +789,21 @@ body {
 			.content {
 				#pricesAndHours {
 					width: 80%;
-					height: 90%;
+					height: 70%;
+					flex-direction: row;
+					-webkit-flex-direction: row;
 					#price, #hour {
-						flex-direction: row;
-						-webkit-flex-direction: row;
 						border-radius: 20px;
-						font-size: 2em;
+						font-size: 1.8em;
 						border: 3px solid black;
 						margin: 2%;
 						-webkit-box-shadow: 5px 10px 20px -5px rgba(128,121,128,1);
 						-moz-box-shadow: 5px 10px 20px -5px rgba(128,121,128,1);
 						box-shadow: 5px 10px 20px -5px rgba(128,121,128,1);
 						.iconRound {
-							top: 15%;
-							left: -3%;
-							width: 80px;
-							height: 80px;
+							left: calc(50% - 45px);
+							width: 90px;
+							height: 90px;
 							border: 3px solid white;
 							-webkit-box-shadow: 5px 10px 20px -5px rgba(143,143,143,1);
 							box-shadow: 5px 10px 20px -5px rgba(143,143,143,1);
@@ -789,23 +813,27 @@ body {
 						}
 						ul {
 							height: 95%;
-							width: 50%;
-							margin: 0;
+							width: 95%;
+							margin-top: 30%;
+							justify-content: center;
+							-webkit-justify-content: center;
+							li {
+								margin: 2% 0;
+							}
 						}
 					}
 					#hour {
 						ul {
+
 							margin-right: 0%;
 							li {
-								justify-content: space-around;
-								-webkit-justify-content: space-around;
 								&:nth-child(1) {
-									font-size: 1.3em;
+									font-size: 1.1em;
 								}
 								&:nth-child(2), &:nth-child(3) {
-									font-size: 1.3em;
+									font-size: 1.1em;
 									color: red;
-								}
+								}	
 							}
 						}
 					}
@@ -832,4 +860,73 @@ body {
 			}	
 		}
     }
+}
+@media only screen and (orientation: portrait) and (min-device-width: 768px) {
+	body {
+		nav {
+			ul {
+				li {
+					font-size: 1.3vw;
+				}
+			}
+		}
+		section#one {
+			.content {
+				h1 {
+				font-size: 9em;
+				text-align: center;
+				margin-bottom: 10%;
+				}
+				p {
+				width: 80%;
+				font-size: 2em;
+				text-align: justify;
+				text-transform: uppercase;
+				line-height: 1.8;
+				}
+			}
+		}
+		section#two {
+			.content {
+				.slideshow-container {
+					width: 90%;
+					height: 80%;
+					.mySlides {
+						flex-direction: column;
+						-webkit-flex-direction: column;
+						.numbertext, .text {
+							font-size: 2.5em;
+						}
+						img {
+							margin: 5%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	body {
+		nav {
+			#navButton {
+				width: 80px;
+				height: 80px;
+				right: -80px;
+				#compassBody {
+					width: 98%;
+					height: 98%;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 1024px) {
+	body {
+		nav {
+			#navButton {
+				display: none;
+			}
+		}
+	}
 }
