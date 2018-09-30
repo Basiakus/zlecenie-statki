@@ -110,7 +110,7 @@ body {
 		justify-content: center;
 		-webkit-justify-content: center;
 		transition: width .5s;
-		z-index: 1;
+		z-index: 19;
 		#navButton {
 			display: flex;
 			display: -webkit-flex;
@@ -254,16 +254,6 @@ body {
 			text-shadow: 2px -1px 2px #000000;
 			color: white;
 		}
-	}
-	section.changeEffects {
-		opacity: 1;
-		filter: blur(0px);
-		-webkit-filter: blur(0px);
-		-webkit-opacity: 1;
-	}
-	section.displayFlex {
-		display: flex;
-		display: -webkit-flex;
 	}
 	section#one {
 		background: url("../img/ship.jpg") no-repeat bottom;
@@ -510,7 +500,7 @@ body {
 			text-shadow: 2px 1px 1px #FFFFFF;
 			#location, #reservation {
 				width: 50%;
-				height: 90%;
+				height: 100%;
 				display: flex;
 				display: -webkit-flex;
 				flex-direction: column;
@@ -522,16 +512,16 @@ body {
 				justify-content: center;
 				align-items: center;
 				#map {
-					width: 70%;
-					height: 70%;
+					width: 90%;
+					height: 90%;
 					border-radius: 20px;
 					border: 7px solid white;
-					-webkit-box-shadow: 10px 10px 30px -10px rgba(0,0,0,0.75);
+					-webkit-box-shadow: 0px 0px 77px -6px rgba(0,0,0,0.75);
 					-moz-box-shadow: 0px 0px 77px -6px rgba(0,0,0,0.75);
 					box-shadow: 0px 0px 77px -6px rgba(0,0,0,0.75);				
 				}
 				h4 {
-					width: 70%;
+					width: 90%;
 					text-align: center;
 					text-transform: uppercase;
 					line-height: 110%;
@@ -559,6 +549,33 @@ body {
 						color: red;
 						margin: 10%;
 						font-size: 2.5em;
+						i {
+							transform: rotate(0deg);
+							animation: shake 3s infinite;
+							-webkit-animation: shake 3s infinite;										
+						}
+						@keyframes shake {
+
+							2% {transform: rotate(0deg) scale(1);}
+							0% {transform: rotate(-15deg);}
+							4% {transform: rotate(0deg) scale(1.2);}
+							6% {transform: rotate(-15deg);}
+							8% {transform: rotate(0deg);}
+							10% {transform: rotate(-15deg);}
+							12% {transform: rotate(0deg);}
+							14% {transform: rotate(-15deg) scale(1.2);}
+							16% {transform: rotate(0deg) scale(1);}
+							100% {transform: rotate(0deg);}
+						}
+						@-webkit-keyframes shake {
+							0% {transform: rotate(-15deg);}
+							2% {transform: rotate(0deg);}
+							4% {transform: rotate(-15deg);}
+							6% {transform: rotate(0deg);}
+							8% {transform: rotate(-15deg);}
+							10% {transform: rotate(0deg);}
+							100% {transform: rotate(0deg);}
+						}
 						p {
 							letter-spacing: 2px;
 						}
@@ -575,8 +592,19 @@ body {
 			width: 100vw;
 			bottom: calc(0% - 8vh);
 			left: 0;
-			background-color: black;
+			background-color: white;
+			z-index: 18;
 		}
+	}
+	section.changeEffects {
+		opacity: 1;
+		filter: blur(0px);
+		-webkit-filter: blur(0px);
+		-webkit-opacity: 1;
+	}
+	section.displayFlex {
+		display: flex;
+		display: -webkit-flex;
 	}
 }
 @media only screen and (max-width: 768px) {
@@ -657,8 +685,8 @@ body {
 		section#tree {
 			.content {
 				#pricesAndHours {
-					width: 80%;
-					height: 80%;
+					width: 90%;
+					height: 90%;
 					flex-direction: column-reverse;
 					-webkit-flex-direction: column-reverse;
 					#price, #hour {
@@ -674,13 +702,7 @@ body {
 						box-shadow: 10px 10px 10px -1px rgba(128,121,128,1);
 						.iconRound {
 							top: -10%;
-							left: -10%;
-							display: flex;
-							display: -webkit-flex;
-							justify-content: center;
-							align-items: center;
-							-webkit-justify-content: center;
-							-webkit-align-items: center;
+							left: -5%;
 							width: 80px;
 							height: 80px;
 							border-radius: 50%;
@@ -743,14 +765,11 @@ body {
 				}
 				#location {
 					#map {
-						width: 98%;
-						height: 98%;
+						width: 90%;
+						height: 90%;
 						border-radius: 3px;
 						border: 2px solid white;
 
-					}
-					h4 {
-						margin: 5%;
 					}
 				}
 			}	
@@ -850,11 +869,11 @@ body {
 				}
 				#location {
 					#map {
-						width: 90%;
-						height: 70%;
+						width: 80%;
+						height: 80%;
 					}
 					h4 {
-					margin-top: 5%;
+					font-size: .6em;
 					}
 				}
 			}	
@@ -899,6 +918,51 @@ body {
 						}
 						img {
 							margin: 5%;
+						}
+					}
+				}
+			}
+		}
+		section#tree {
+			.content {
+				font-size: 3em;
+				#pricesAndHours {
+					#price, #hour {
+						height: 100%;
+						width: 100%;
+						justify-content: flex-end;
+						-webkit-justify-content: flex-end;
+						.iconRound {
+							width: 150px;
+							height: 150px;
+							left: calc(50% - 75px);
+							i {
+								font-size: 1em;
+							}
+						}
+						ul {
+							width: 90%;
+							margin-bottom: 7%;
+							li {
+								margin: 7% 0;
+							}
+						}
+					}
+				}
+			}
+		}
+		section#four {
+			.content {
+				#reservation {
+					h2 {
+						font-size: 3em;
+						}
+					span {
+						&:nth-child(2) {
+							font-size: 4em;
+						}
+						&:nth-child(3) {
+							font-size: 2em; 
 						}
 					}
 				}
