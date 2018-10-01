@@ -585,28 +585,29 @@ body {
 					&:nth-child(3) {
 						font-size: 1.3em;
 						i {
+							font-size: 1.8em;
 							animation: write 3s infinite;
 							-webkit-animation: write 3s infinite;
 						}
 						@keyframes write {
 							0% {transform: translate(0%, 0%);}
-							60% {transform: translate(0%, 0%) scale(1);}
-							65% {transform: translate(-5%, -10%) scale(2);}
-							70% {transform: translate(5%, 0%) scale(2);}
-							75% {transform: translate(10%, -10%) scale(2);}
-							80% {transform: translate(15%, 0%) scale(2);}
-							95% {transform: translate(10%, -10%) scale(2);}
-							100% {transform: translate(0%, 0%) scale(1);}
+							60% {transform: translate(0%, 0%) scale(1) rotate(0deg);}
+							65% {transform: translate(-10%, -30%) scale(1.5) rotate(-5deg);}
+							70% {transform: translate(10%, 10%) scale(1.5) rotate(5deg);}
+							75% {transform: translate(20%, -30%) scale(1.5) rotate(-5deg);}
+							80% {transform: translate(30%, 10%) scale(1.5) rotate(5deg);}
+							95% {transform: translate(40%, -30%) scale(1.5) rotate(-5deg);}
+							100% {transform: translate(0%, 0%) scale(1) rotate(0deg);}
 						}
 						@-webkit-keyframes write {
 							0% {transform: translate(0%, 0%);}
-							60% {transform: translate(0%, 0%) scale(1);}
-							65% {transform: translate(-5%, -10%) scale(2);}
-							70% {transform: translate(5%, 0%) scale(2);}
-							75% {transform: translate(10%, -10%) scale(2);}
-							80% {transform: translate(15%, 0%) scale(2);}
-							95% {transform: translate(10%, -10%) scale(2);}
-							100% {transform: translate(0%, 0%) scale(1);}
+							60% {transform: translate(0%, 0%) scale(1) rotate(0deg);}
+							65% {transform: translate(-10%, -30%) scale(1.5) rotate(-5deg);}
+							70% {transform: translate(10%, 10%) scale(1.5) rotate(5deg);}
+							75% {transform: translate(20%, -30%) scale(1.5) rotate(-5deg);}
+							80% {transform: translate(30%, 10%) scale(1.5) rotate(5deg);}
+							95% {transform: translate(40%, -30%) scale(1.5) rotate(-5deg);}
+							100% {transform: translate(0%, 0%) scale(1) rotate(0deg);}
 						}
 					}
 				}
