@@ -485,6 +485,8 @@ body {
           display: -webkit-flex;
           flex-direction: row;
           -webkit-flex-direction: row;
+          align-items: baseline;
+          -webkit-align-items: baseline;
           text-transform: uppercase; }
           body section#four .content #reservation span i {
             margin-right: 3%; }
@@ -493,49 +495,93 @@ body {
             margin: 10%;
             font-size: 2.5em; }
             body section#four .content #reservation span:nth-child(2) i {
+              font-size: 1em;
               transform: rotate(0deg);
               animation: shake 3s infinite;
               -webkit-animation: shake 3s infinite; }
 @keyframes shake {
-  2% {
-    transform: rotate(0deg) scale(1); }
   0% {
-    transform: rotate(-15deg); }
+    transform: rotate(0deg) scale(1); }
+  2% {
+    transform: rotate(-15deg) scale(1.5); }
   4% {
-    transform: rotate(0deg) scale(1.2); }
-  6% {
-    transform: rotate(-15deg); }
+    transform: rotate(0deg) scale(1.5); }
   8% {
-    transform: rotate(0deg); }
+    transform: rotate(-15deg) scale(1.5); }
   10% {
-    transform: rotate(-15deg); }
+    transform: rotate(0deg) scale(1.5); }
   12% {
-    transform: rotate(0deg); }
+    transform: rotate(-15deg) scale(1.5); }
   14% {
-    transform: rotate(-15deg) scale(1.2); }
+    transform: rotate(0deg) scale(1.5); }
   16% {
+    transform: rotate(-15deg) scale(1.5); }
+  18% {
     transform: rotate(0deg) scale(1); }
   100% {
-    transform: rotate(0deg); } }
+    transform: rotate(0deg) scale(1); } }
 @-webkit-keyframes shake {
   0% {
-    transform: rotate(-15deg); }
+    transform: rotate(0deg) scale(1); }
   2% {
-    transform: rotate(0deg); }
+    transform: rotate(-15deg) scale(1.5); }
   4% {
-    transform: rotate(-15deg); }
-  6% {
-    transform: rotate(0deg); }
+    transform: rotate(0deg) scale(1.5); }
   8% {
-    transform: rotate(-15deg); }
+    transform: rotate(-15deg) scale(1.5); }
   10% {
-    transform: rotate(0deg); }
+    transform: rotate(0deg) scale(1.5); }
+  12% {
+    transform: rotate(-15deg) scale(1.5); }
+  14% {
+    transform: rotate(0deg) scale(1.5); }
+  16% {
+    transform: rotate(-15deg) scale(1.5); }
+  18% {
+    transform: rotate(0deg) scale(1); }
   100% {
-    transform: rotate(0deg); } }
+    transform: rotate(0deg) scale(1); } }
             body section#four .content #reservation span:nth-child(2) p {
               letter-spacing: 2px; }
           body section#four .content #reservation span:nth-child(3) {
             font-size: 1.3em; }
+            body section#four .content #reservation span:nth-child(3) i {
+              animation: write 3s infinite;
+              -webkit-animation: write 3s infinite; }
+@keyframes write {
+  0% {
+    transform: translate(0%, 0%); }
+  60% {
+    transform: translate(0%, 0%) scale(1); }
+  65% {
+    transform: translate(-5%, -10%) scale(2); }
+  70% {
+    transform: translate(5%, 0%) scale(2); }
+  75% {
+    transform: translate(10%, -10%) scale(2); }
+  80% {
+    transform: translate(15%, 0%) scale(2); }
+  95% {
+    transform: translate(10%, -10%) scale(2); }
+  100% {
+    transform: translate(0%, 0%) scale(1); } }
+@-webkit-keyframes write {
+  0% {
+    transform: translate(0%, 0%); }
+  60% {
+    transform: translate(0%, 0%) scale(1); }
+  65% {
+    transform: translate(-5%, -10%) scale(2); }
+  70% {
+    transform: translate(5%, 0%) scale(2); }
+  75% {
+    transform: translate(10%, -10%) scale(2); }
+  80% {
+    transform: translate(15%, 0%) scale(2); }
+  95% {
+    transform: translate(10%, -10%) scale(2); }
+  100% {
+    transform: translate(0%, 0%) scale(1); } }
     body section#four #footer {
       position: absolute;
       height: 8vh;
