@@ -537,8 +537,7 @@ body {
 					display: -webkit-flex;
 					flex-direction: row;
 					-webkit-flex-direction: row;
-					align-items: baseline;
-					-webkit-align-items: baseline;
+
 					text-transform: uppercase;
 					i {
 						margin-right: 3%;
@@ -598,9 +597,13 @@ body {
 			-webkit-align-items: center;
 			justify-content: center;
 			align-items: center;
+			overflow: hidden;
 			p {
 				position: relative;
+				font-size: .7em;
+				text-transform: uppercase;
 				user-select: none; 
+				-webkit-align-items: center;
 				-webkit-user-select: none; 
 				-moz-user-select: none; 
 				span#myMail {				
@@ -609,6 +612,7 @@ body {
 					color: blue;
 					cursor: pointer;
 					transition: .2s;
+					letter-spacing: 1px;
 					user-select: auto; 
 					-webkit-user-select: auto; 
 					-moz-user-select: auto; 
@@ -629,7 +633,7 @@ body {
 					padding: 1% 2%;
 					border-radius: 10px;
 					text-transform: uppercase;
-					letter-spacing: 2px;
+					letter-spacing: 1px;
 				}
 				#myMailInfo.copied {
 					opacity: 1;

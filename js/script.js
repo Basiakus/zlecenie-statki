@@ -134,16 +134,20 @@ function copyEmail () {
 	const myMail = document.querySelector('#myMail');
 	const myMailInfo = document.querySelector('#myMailInfo');
     const tempTextArea = document.createElement("textarea");
-
-    tempTextArea.value = this.textContent;
+    const originalText = this.textContent;
+    tempTextArea.value = originalText;
     document.body.appendChild(tempTextArea);
     tempTextArea.select();
     document.execCommand("Copy");
     tempTextArea.remove();
-    console.log(this.textContent);
 
-    myMailInfo.classList.add('copied');
-    setTimeout(() => myMailInfo.classList.remove('copied'), 2000);
+    if(window.screen.availWidth < 1024) {
+    	this.textContent = "skopiowano";
+    	setTimeout(() => this.textContent = originalText, 2000);
+    } else {
+    	myMailInfo.classList.add('copied');
+    	setTimeout(() => myMailInfo.classList.remove('copied'), 2000);
+    }
 }
 myMail.addEventListener('click', copyEmail);
 
