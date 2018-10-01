@@ -427,7 +427,7 @@ body {
             justify-content: flex-end;
             -webkit-justify-content: flex-end; }
           body section#tree .content #pricesAndHours #price ul li span.ageInfo, body section#tree .content #pricesAndHours #hour ul li span.ageInfo {
-            margin-left: 2%;
+            margin-left: 4%;
             font-size: .5em; }
     body section#tree .content #pricesAndHours #hour ul li {
       justify-content: center;
