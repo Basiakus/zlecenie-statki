@@ -127,3 +127,23 @@ window.addEventListener("load",() => {
 		setTimeout(() => loadingPage.style.display = 'none', 500);
 	}, 1);
 }); 
+
+
+
+function copyEmail () {
+	const myMail = document.querySelector('#myMail');
+	const myMailInfo = document.querySelector('#myMailInfo');
+    const tempTextArea = document.createElement("textarea");
+
+    tempTextArea.value = this.textContent;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand("Copy");
+    tempTextArea.remove();
+    console.log(this.textContent);
+
+    myMailInfo.classList.add('copied');
+    setTimeout(() => myMailInfo.classList.remove('copied'), 2000);
+}
+myMail.addEventListener('click', copyEmail);
+

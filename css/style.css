@@ -8,7 +8,8 @@ body {
   width: 100%;
   height: 100%;
   font-family: 'Kalam', cursive;
-  background-color: #F8FAD7; }
+  background-color: #F8FAD7;
+  /*add/remove classes*/ }
   body #loadingPage {
     display: flex;
     display: -webkit-flex;
@@ -232,8 +233,6 @@ body {
       width: 20%;
       float: left;
       transition: .5s; }
-    body section .emptyContent.hide {
-      width: 0%; }
     body section .content {
       display: flex;
       display: -webkit-flex;
@@ -545,8 +544,46 @@ body {
       width: 100vw;
       bottom: calc(0% - 8vh);
       left: 0;
-      background-color: white;
-      z-index: 18; }
+      background-color: inherit;
+      z-index: 18;
+      display: flex;
+      -webkit-display: flex;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
+      justify-content: center;
+      align-items: center; }
+      body section#four #footer p {
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none; }
+        body section#four #footer p span#myMail {
+          flex-direction: row;
+          -webkit-flex-direction: row;
+          color: blue;
+          cursor: pointer;
+          transition: .2s;
+          user-select: auto;
+          -webkit-user-select: auto;
+          -moz-user-select: auto; }
+          body section#four #footer p span#myMail:active {
+            opacity: .3;
+            font-size: .95em; }
+        body section#four #footer p #myMailInfo {
+          opacity: 0;
+          transition: .3s;
+          position: absolute;
+          top: -50%;
+          left: 90%;
+          background-color: white;
+          color: black;
+          text-align: center;
+          padding: 1% 2%;
+          border-radius: 10px;
+          text-transform: uppercase;
+          letter-spacing: 2px; }
+        body section#four #footer p #myMailInfo.copied {
+          opacity: 1; }
   body section.changeEffects {
     opacity: 1;
     filter: blur(0px);
@@ -555,6 +592,8 @@ body {
   body section.displayFlex {
     display: flex;
     display: -webkit-flex; }
+  body section .emptyContent.hide {
+    width: 0%; }
 
 @media only screen and (max-width: 768px) {
   body nav {
@@ -635,7 +674,7 @@ body {
       body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
         display: flex;
         display: -webkit-flex;
-        width: 65%;
+        width: 50%;
         height: 60%;
         margin-bottom: 0%;
         justify-content: space-between;
@@ -647,6 +686,8 @@ body {
           margin: 0; }
     body section#tree .content #pricesAndHours #price {
       z-index: 2; }
+      body section#tree .content #pricesAndHours #price ul li span.ageInfo {
+        font-size: .4em; }
     body section#tree .content #pricesAndHours #hour ul li:nth-child(1) {
       font-size: 1em; }
   body section#four .content {
@@ -655,13 +696,17 @@ body {
     body section#four .content #location, body section#four .content #reservation {
       width: 100%;
       height: 50%; }
+    body section#four .content #reservation span:nth-child(2) {
+      font-size: 2.1em; }
     body section#four .content #reservation span:nth-child(3) {
-      font-size: 1.1em; }
+      font-size: .9em; }
     body section#four .content #location #map {
       width: 90%;
       height: 90%;
       border-radius: 3px;
-      border: 2px solid white; } }
+      border: 2px solid white; }
+    body section#four .content #location h4 {
+      font-size: .6em; } }
 @media only screen and (orientation: landscape) and (max-device-width: 768px) {
   body nav ul li {
     flex-direction: row;
@@ -700,7 +745,7 @@ body {
           font-size: 1em; }
       body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
         height: 95%;
-        width: 95%;
+        width: 75%;
         margin-top: 30%;
         justify-content: center;
         -webkit-justify-content: center; }
