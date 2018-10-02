@@ -10,7 +10,6 @@ body {
 	width: 100%;
 	height: 100%;
 	font-family: 'Kalam', cursive;
-	background-color: #F8FAD7;
 	#loadingPage {
 		display: flex;
 		display: -webkit-flex;
@@ -225,14 +224,32 @@ body {
 		}
 	}
 	section {
-		width: 100%;
+		width: 100vw;
 		height: 100vh;
 		display: none;
     	filter: blur(35px);
 		opacity: 0;
 		-webkit-opacity: 0;
 		-webkit-filter: blur(35px); 
+		overflow: hidden;
 		transition: .5s;
+		.wallpapers {
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			animation: zoom infinite 30s;
+		}
+		@keyframes zoom {
+			0% {transform: scale(1);}
+			50% {transform: scale(1.2);}
+			100% {transform: scale(1);}
+		}
+		@-webkit-keyframes zoom {
+			0% {transform: scale(1);}
+			50% {transform: scale(1.2);}
+			100% {transform: scale(1);}
+		} 
 		.emptyContent {
 			width: 20%;
 			float: left;
@@ -254,8 +271,10 @@ body {
 		}
 	}
 	section#one {
-		background: url("../img/ship.jpg") no-repeat bottom;
-		background-size: cover;
+		.wallpapers {
+			background: url("../img/1.jpg") no-repeat center;
+			background-size: cover;
+		}
 		.content {
 			flex-direction: column;
 			h1, p {
@@ -272,8 +291,10 @@ body {
 		}
 	}
 	section#two {
-		background: url("https://ocs-pl.oktawave.com/v1/AUTH_f9dd5582-c0b6-4b27-a573-ecf06cf3ef09/tropter-www/uploads/attachments/1e56a4e740e68bcf54b28fb22187dc2fa0df4e79/big.jpeg?t=20180803111119") no-repeat bottom;
-		background-size: cover;
+		.wallpapers {
+			background: url("../img/2.jpg") no-repeat center;
+			background-size: cover;
+		}
 		.content {
 			flex-direction: column;
 			.slideshow-container {
@@ -373,12 +394,17 @@ body {
 		}
 	}
 	section#tree {
+		.wallpapers {
+			background: url("../img/3.jpg") no-repeat center;
+			background-size: cover;
+		}
 		.content {
 			#pricesAndHours {
 				display: flex;
 				display: -webkit-flex;
 				width: 100%;
 				height: 60%;
+				opacity: .7;
 				#price, #hour {
 					position: relative;
 					flex: 1;
@@ -490,8 +516,12 @@ body {
 		}
 	}
 	section#four {
-			height: 92vh;
+		.wallpapers {
+			background: url("../img/4.jpg") no-repeat center;
+			background-size: cover;
+		}
 		.content {
+			height: 95vh;
 			flex-direction: row-reverse;
 			-webkit-flex-direction: row-reverse;
 			color: black;
@@ -514,6 +544,7 @@ body {
 					height: 90%;
 					border-radius: 20px;
 					border: 7px solid white;
+					opacity: .7;
 					-webkit-box-shadow: 0px 0px 77px -6px rgba(0,0,0,0.75);
 					-moz-box-shadow: 0px 0px 77px -6px rgba(0,0,0,0.75);
 					box-shadow: 0px 0px 77px -6px rgba(0,0,0,0.75);				
@@ -615,9 +646,9 @@ body {
 		}
 		#footer {
 			position: absolute;
-			height: 8vh;
+			height: 5vh;
 			width: 100vw;
-			bottom: calc(0% - 8vh);
+			bottom: 0;
 			left: 0;
 			background-color: inherit;
 			z-index: 18;
@@ -814,7 +845,7 @@ body {
 						}
 					}
 					#price {
-						z-index: 2;
+						z-index: 16;
 						ul {
 							li {
 								span.ageInfo {
