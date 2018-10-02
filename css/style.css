@@ -237,18 +237,24 @@ body {
       animation: zoom infinite 30s; }
 @keyframes zoom {
   0% {
-    transform: scale(1); }
+    transform: scale(1);
+    filter: sepia(90%) saturate(100%); }
   50% {
-    transform: scale(1.2); }
+    transform: scale(1.2);
+    filter: sepia(0%) saturate(120%); }
   100% {
-    transform: scale(1); } }
+    transform: scale(1);
+    filter: sepia(90%) saturate(100%); } }
 @-webkit-keyframes zoom {
   0% {
-    transform: scale(1); }
+    transform: scale(1);
+    filter: sepia(90%) saturate(100%); }
   50% {
-    transform: scale(1.2); }
+    transform: scale(1.2);
+    filter: sepia(0%) saturate(120%); }
   100% {
-    transform: scale(1); } }
+    transform: scale(1);
+    filter: sepia(90%) saturate(100%); } }
     body section .emptyContent {
       width: 20%;
       float: left;

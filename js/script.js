@@ -120,12 +120,14 @@ function mapRefresh() {
 
 /* --LOADING PAGE-- */
 
-/*loading of all external stuff is done*/
+/*loading of all external stuff and DOM elements are done*/
 window.addEventListener("load",() => {
-	setTimeout(() => {
-		loadingPage.classList.add('pageLoaded');
-		setTimeout(() => loadingPage.style.display = 'none', 500);
-	}, 1);
+	if (document.readyState === "complete" || document.readyState === "loaded") {	
+		setTimeout(() => {
+			loadingPage.classList.add('pageLoaded');
+			setTimeout(() => loadingPage.style.display = 'none', 500);
+		}, 500);
+	}
 }); 
 
 

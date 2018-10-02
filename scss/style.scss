@@ -241,14 +241,14 @@ body {
 			animation: zoom infinite 30s;
 		}
 		@keyframes zoom {
-			0% {transform: scale(1);}
-			50% {transform: scale(1.2);}
-			100% {transform: scale(1);}
+			0% {transform: scale(1); filter: sepia(90%) saturate(100%);}
+			50% {transform: scale(1.2); filter: sepia(0%) saturate(120%);}
+			100% {transform: scale(1); filter: sepia(90%) saturate(100%);}
 		}
 		@-webkit-keyframes zoom {
-			0% {transform: scale(1);}
-			50% {transform: scale(1.2);}
-			100% {transform: scale(1);}
+			0% {transform: scale(1); filter: sepia(90%) saturate(100%);}
+			50% {transform: scale(1.2); filter: sepia(0%) saturate(120%);}
+			100% {transform: scale(1); filter: sepia(90%) saturate(100%);}
 		} 
 		.emptyContent {
 			width: 20%;
