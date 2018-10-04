@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: 1px solid red;
   box-sizing: border-box; }
 
 body {
@@ -24,7 +25,7 @@ body {
     color: white;
     position: absolute;
     z-index: 20;
-    transition: opacity .5s; }
+    transition: opacity .3s; }
     body #loadingPage #loader {
       position: absolute;
       width: 8vmax;
@@ -199,16 +200,17 @@ body {
         display: -webkit-flex;
         flex: 1;
         align-items: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center;
         transition: .4s;
         font-size: 1vw;
         color: white; }
         body nav ul li i {
-          width: 20%;
           font-size: 2em;
           transition: opacity .4s; }
         body nav ul li span {
           transition: opacity .2s;
-          width: 80%;
           text-transform: uppercase;
           font-size: 1.5em;
           text-align: center; }
@@ -217,7 +219,7 @@ body {
           cursor: pointer; }
   body nav.off {
     width: 0vw; }
-    body nav.off span, body nav.off i {
+    body nav.off li {
       opacity: 0; }
   body section {
     width: 100vw;
@@ -238,23 +240,23 @@ body {
 @keyframes zoom {
   0% {
     transform: scale(1);
-    filter: sepia(90%) saturate(100%); }
+    filter: sepia(100%) saturate(100%); }
   50% {
     transform: scale(1.2);
-    filter: sepia(0%) saturate(120%); }
+    filter: sepia(0%) saturate(110%); }
   100% {
     transform: scale(1);
-    filter: sepia(90%) saturate(100%); } }
+    filter: sepia(100%) saturate(100%); } }
 @-webkit-keyframes zoom {
   0% {
     transform: scale(1);
-    filter: sepia(90%) saturate(100%); }
+    filter: sepia(100%) saturate(100%); }
   50% {
     transform: scale(1.2);
-    filter: sepia(0%) saturate(120%); }
+    filter: sepia(0%) saturate(110%); }
   100% {
     transform: scale(1);
-    filter: sepia(90%) saturate(100%); } }
+    filter: sepia(100%) saturate(100%); } }
     body section .emptyContent {
       width: 20%;
       float: left;
@@ -688,18 +690,13 @@ body {
         border: none;
         margin-bottom: 10%;
         padding: 0;
+        font-weight: bold;
+        font-size: .6em;
         flex-direction: column;
-        justify-content: center;
-        -webkit-justify-content: center;
-        -webkit-flex-direction: column;
-        padding: 10%; }
-        body nav ul li:last-child i, body nav ul li:last-child span {
-          font-size: 3em; }
-        body nav ul li:last-child span {
-          width: 100%; }
-        body nav ul li i, body nav ul li span {
-          font-size: 3em;
-          font-weight: bold; }
+        -webkit-flex-direction: column; }
+        body nav ul li i {
+          font-size: 4em;
+          margin-bottom: 1%; }
   body section .emptyContent {
     display: none; }
   body section .content {
@@ -852,7 +849,32 @@ body {
       height: 80%; }
     body section#four .content #location h4 {
       font-size: .6em; } }
-@media only screen and (orientation: portrait) and (min-device-width: 768px) {
+@media only screen and (orientation: portrait) and (max-device-width: 768px) {
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+      filter: sepia(100%) saturate(100%); }
+    50% {
+      transform: scale(1.1);
+      filter: sepia(0%) saturate(110%); }
+    100% {
+      transform: scale(1);
+      filter: sepia(100%) saturate(100%); } }
+  @-webkit-keyframes zoom {
+    0% {
+      transform: scale(1);
+      filter: sepia(100%) saturate(100%); }
+    50% {
+      transform: scale(1.1);
+      filter: sepia(0%) saturate(110%); }
+    100% {
+      transform: scale(1);
+      filter: sepia(100%) saturate(100%); } }
+  body section#one .wallpapers, body section#two .wallpapers, body section#tree .wallpapers, body section#four .wallpapers {
+    background-position: 35% 100%;
+    background-size: auto 100%;
+    animation: zoom infinite 10s; } }
+@media only screen and (orientation: portrait) and (min-device-width: 769px) {
   body nav ul li {
     font-size: 1.3vw; }
   body section#one .content h1 {

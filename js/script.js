@@ -125,7 +125,7 @@ window.addEventListener("load",() => {
 	if (document.readyState === "complete" || document.readyState === "loaded") {	
 		setTimeout(() => {
 			loadingPage.classList.add('pageLoaded');
-			setTimeout(() => loadingPage.style.display = 'none', 500);
+			setTimeout(() => loadingPage.style.display = 'none', 300);
 		}, 500);
 	}
 }); 
