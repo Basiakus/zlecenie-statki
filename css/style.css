@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid red;
   box-sizing: border-box; }
 
 body {
@@ -314,11 +313,16 @@ body {
         -webkit-align-items: center;
         border: 4px solid white; }
         body section#two .content .slideshow-container .mySlides .numbertext {
-          font-size: 1em;
+          width: 100%;
+          text-align: center;
+          font-size: 1.5em;
           padding: 1%;
           font-weight: bold;
           position: absolute;
-          top: 0; }
+          color: #438f48;
+          top: 0;
+          color: #b3dd70;
+          text-shadow: 2px 2px 2px #438f48; }
         body section#two .content .slideshow-container .mySlides img {
           position: absolute;
           width: 25%;
@@ -829,6 +833,10 @@ body {
     border-radius: 10px; }
     body section#two .content .slideshow-container .mySlides .text {
       font-size: 3vw; }
+  body section#two .content .slideshow-container .prev, body section#two .content .slideshow-container .next {
+    font-size: 3em; }
+    body section#two .content .slideshow-container .prev:active, body section#two .content .slideshow-container .next:active {
+      font-size: 2.8em; }
   body section#two .content h3 {
     width: 90%; }
   body section#tree .content #pricesAndHours {
@@ -989,7 +997,8 @@ body {
       transform: scale(1);
       filter: sepia(100%) saturate(100%); } }
   body section#two .content .slideshow-container {
-    width: 99%; }
+    width: 99%;
+    height: 50%; }
   body section#one .wallpapers, body section#two .wallpapers, body section#tree .wallpapers, body section#four .wallpapers {
     background-position: 35% 100%;
     background-size: auto 100%;
