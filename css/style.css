@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Kalam:400");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
 * {
   margin: 0;
   padding: 0;
+  border: 1px solid red;
   box-sizing: border-box; }
 
 body {
@@ -220,9 +222,8 @@ body {
           color: red;
           cursor: pointer; }
   body nav.off {
-    width: 0vw;
-    margin-left: -10px; }
-    body nav.off li {
+    width: 0vw; }
+    body nav.off ul li {
       opacity: 0; }
   body section {
     width: 100vw;
@@ -827,16 +828,22 @@ body {
     text-align: right;
     text-transform: uppercase;
     line-height: 1.2; }
-  body section#two .content .slideshow-container .mySlides {
-    flex-direction: row;
-    -webkit-flex-direction: row;
-    border-radius: 10px; }
-    body section#two .content .slideshow-container .mySlides .text {
-      font-size: 3vw; }
-  body section#two .content .slideshow-container .prev, body section#two .content .slideshow-container .next {
-    font-size: 3em; }
-    body section#two .content .slideshow-container .prev:active, body section#two .content .slideshow-container .next:active {
+  body section#two .content .slideshow-container {
+    width: 99%; }
+    body section#two .content .slideshow-container .mySlides {
+      flex-direction: row;
+      -webkit-flex-direction: row;
+      border-radius: 10px; }
+      body section#two .content .slideshow-container .mySlides .text {
+        font-size: 3vw; }
+    body section#two .content .slideshow-container .prev, body section#two .content .slideshow-container .next {
       font-size: 2.8em; }
+      body section#two .content .slideshow-container .prev:active, body section#two .content .slideshow-container .next:active {
+        font-size: 2.5em; }
+    body section#two .content .slideshow-container .prev {
+      left: 2%; }
+    body section#two .content .slideshow-container .next {
+      right: 2%; }
   body section#two .content h3 {
     width: 90%; }
   body section#tree .content #pricesAndHours {

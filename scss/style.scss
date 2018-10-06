@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Kalam:400');
-//@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 * {
 	margin: 0;
 	padding: 0;
-	//border: 1px solid red;
+	border: 1px solid red;
 	box-sizing: border-box;    
 }
 
@@ -225,9 +225,11 @@ body {
 	}
 	nav.off {
 		width: 0vw;
-		margin-left: -10px;
-		li {
-			opacity: 0;
+		
+		ul {
+			li {
+				opacity: 0;
+			}
 		}
 	}
 	section {
@@ -895,6 +897,7 @@ body {
         section#two {
         	.content {
 	        	.slideshow-container {
+	        		width: 99%;
 					.mySlides {
 						flex-direction: row;
 						-webkit-flex-direction: row;
@@ -904,10 +907,16 @@ body {
 						}
 					}
 					.prev, .next {
-						font-size: 3em;
+						font-size: 2.8em;
 						&:active {
-							font-size: 2.8em;
+							font-size: 2.5em;
 						}
+					}
+					.prev {
+						left: 2%;
+					}
+					.next {
+						right: 2%;
 					}
 	        	}
 	        	h3 {
