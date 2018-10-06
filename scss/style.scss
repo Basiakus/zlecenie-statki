@@ -3,7 +3,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	//border: 1px solid red;
+	border: 1px solid red;
 	box-sizing: border-box;    
 }
 
@@ -471,25 +471,33 @@ body {
 					to {opacity: .9}
 				}
 				.prev, .next {
-					width: 5%;
-					height: 10%;
 					cursor: pointer;
 					position: absolute;
-					top: 45%;
-					color: black;
+					top: 50%;
 					font-weight: bold;
-					font-size: 2em;
-					transition: 0.3s ease;
+					font-size: 4em;
+					transition: 0.2s ease;
 					-webkit-user-select: none;
 					-moz-user-select: none;
 					-ms-user-select: none;
-					user-select: none;  
-					&:active {
-						transform: scale(.9);
-					}
+					user-select: none;
+					transform: translateY(-50%);  
 				}
 				.next {
-					right: 0;
+					right: -1%;
+					color: white;
+					text-shadow: 6px 0px 10px rgba(179, 221, 112, 1);
+					&:active {
+						font-size: 3.8em;
+					}
+				}
+				.prev {
+					left: -1%;
+					color: rgb(179, 221, 112);
+					text-shadow: -6px 0px 10px  rgba(67,143,72,1);
+					&:active {
+						font-size: 3.8em;
+					}
 				}
 			}
 			h3 {
