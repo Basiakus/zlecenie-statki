@@ -792,7 +792,7 @@ body {
       align-items: baseline;
       -webkit-align-items: baseline; }
       body section#four #footer p span#heart i {
-        font-size: 2em;
+        font-size: 1.5em;
         margin: 0 .3vw;
         animation: beat 3s infinite;
         -webkit-animation: beat 3s infinite;
