@@ -84,7 +84,12 @@ function showSection() {
 		changeEffects(index);
 		mapRefresh();/*correct display of map in section 4 after display changeing*/																										
 	}, 10);
-	showNavigation();					
+	showNavigation();
+	/*holding red color on li element after click*/
+	navTrigers.forEach( triger => {
+		triger.classList.remove('red');	
+	});
+	this.classList.add('red');					
 }
 navTrigers.forEach( triger => {
 	triger.addEventListener('click',showSection);
@@ -131,6 +136,8 @@ window.addEventListener("load",() => {
 }); 
 
 
+
+/* --COPY TEXT OF EMAIL TO CLIPBOARD-- */
 
 function copyEmail () {
 	const myMail = document.querySelector('#myMail');

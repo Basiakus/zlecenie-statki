@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Kalam");
+@import url("https://fonts.googleapis.com/css?family=Kalam|Dancing+Script");
 * {
   margin: 0;
   padding: 0;
@@ -221,6 +221,8 @@ body {
         body nav ul li:hover {
           color: red;
           cursor: pointer; }
+      body nav ul li.red {
+        color: red; }
   body nav.off {
     width: 0vw; }
     body nav.off ul li {
@@ -380,27 +382,27 @@ body {
     box-shadow: 0px 0px 5px 3px #ff5252; } }
         body section#two .content .slideshow-container .mySlides .target#id1 {
           background-color: red;
-          left: 31%;
-          top: 63.5%; }
+          left: 31.3%;
+          top: 63.45%; }
         body section#two .content .slideshow-container .mySlides .target#id2 {
           background-color: red;
-          left: 42.4%;
-          top: 90.2%; }
+          left: 42.5%;
+          top: 89.5%; }
         body section#two .content .slideshow-container .mySlides .target#id3 {
           background-color: red;
-          left: 54.3%;
-          top: 93.9%; }
+          left: 54.2%;
+          top: 93.2%; }
         body section#two .content .slideshow-container .mySlides .target#id4 {
           background-color: red;
-          left: 52.45%;
-          top: 84%; }
+          left: 52.3%;
+          top: 83.6%; }
         body section#two .content .slideshow-container .mySlides .target#id5 {
           background-color: red;
-          left: 39.6%;
-          top: 64.7%; }
+          left: 39.8%;
+          top: 64.6%; }
         body section#two .content .slideshow-container .mySlides .target#id6 {
           background-color: red;
-          left: 44.8%;
+          left: 44.95%;
           top: 61.4%; }
         body section#two .content .slideshow-container .mySlides .target#id7 {
           background-color: red;
@@ -412,39 +414,39 @@ body {
           top: 43.3%; }
         body section#two .content .slideshow-container .mySlides .target#id9 {
           background-color: red;
-          left: 61.3%;
-          top: 36.2%; }
+          left: 61.2%;
+          top: 36.65%; }
         body section#two .content .slideshow-container .mySlides .target#id10 {
           background-color: red;
-          left: 60.5%;
-          top: 13%; }
+          left: 60.35%;
+          top: 13.7%; }
         body section#two .content .slideshow-container .mySlides .target#id11 {
           background-color: red;
-          left: 62%;
-          top: 5.7%; }
+          left: 61.8%;
+          top: 6.6%; }
         body section#two .content .slideshow-container .mySlides .target#id12 {
           background-color: red;
-          left: 26%;
-          top: 12.5%; }
+          left: 26.7%;
+          top: 13.5%; }
         body section#two .content .slideshow-container .mySlides .target#id13 {
           background-color: red;
-          left: 13%;
-          top: 10%; }
+          left: 13.9%;
+          top: 10.8%; }
         body section#two .content .slideshow-container .mySlides .target#id14 {
           background-color: red;
-          left: 51.5%;
-          top: 19.5%; }
+          left: 51.6%;
+          top: 20.1%; }
         body section#two .content .slideshow-container .mySlides .target#id15 {
           background-color: red;
-          left: 50.5%;
-          top: 38.4%; }
+          left: 50.6%;
+          top: 38.5%; }
         body section#two .content .slideshow-container .mySlides .target#id16 {
           background-color: red;
-          left: 48.5%;
-          top: 45.7%; }
+          left: 48.6%;
+          top: 45.8%; }
         body section#two .content .slideshow-container .mySlides .target#id17 {
           background-color: red;
-          left: 32.7%;
+          left: 32.92%;
           top: 54.4%; }
       body section#two .content .slideshow-container .fade {
         -webkit-animation-name: fade;
@@ -528,7 +530,9 @@ body {
       transform: rotateX(2deg);
       -webkit-box-shadow: 10px 15px 30px -1px black;
       -moz-box-shadow: 10px 15px 30px -1px black;
-      box-shadow: 10px 15px 30px -1px black; }
+      box-shadow: 10px 15px 30px -1px black;
+      text-shadow: 0px 0px 5px white;
+      -webkit-text-shadow: 0px 0px 4px white; }
       body section#tree .content #pricesAndHours #price .iconRound, body section#tree .content #pricesAndHours #hour .iconRound {
         position: absolute;
         top: 5%;
@@ -543,9 +547,9 @@ body {
         border-radius: 50%;
         background-color: black;
         opacity: .9;
-        border: 5px solid white;
-        box-shadow: 0px 0px 10px 10px #8f8f8f;
-        -webkit-box-shadow: 0px 0px 10px 10px #8f8f8f; }
+        border: 2px solid white;
+        box-shadow: 0px 0px 5px 2px #8f8f8f;
+        -webkit-box-shadow: 0px 0px 5px 2px #8f8f8f; }
         body section#tree .content #pricesAndHours #price .iconRound i, body section#tree .content #pricesAndHours #hour .iconRound i {
           font-size: 2.5em;
           color: white; }
@@ -579,7 +583,9 @@ body {
             font-size: 1.1em;
             text-transform: lowercase;
             justify-content: flex-end;
-            -webkit-justify-content: flex-end; }
+            -webkit-justify-content: flex-end;
+            text-shadow: 0px 0px 4px red;
+            -webkit-text-shadow: 0px 0px 4px red; }
           body section#tree .content #pricesAndHours #price ul li span.ageInfo, body section#tree .content #pricesAndHours #hour ul li span.ageInfo {
             margin-left: 4%;
             font-size: .5em; }
@@ -590,7 +596,9 @@ body {
         font-size: 1.3em; }
       body section#tree .content #pricesAndHours #hour ul li:nth-child(2), body section#tree .content #pricesAndHours #hour ul li:nth-child(3) {
         font-size: 1.3em;
-        color: red; }
+        color: red;
+        text-shadow: 0px 0px 4px red;
+        -webkit-text-shadow: 0px 0px 4px red; }
         body section#tree .content #pricesAndHours #hour ul li:nth-child(2) sup, body section#tree .content #pricesAndHours #hour ul li:nth-child(3) sup {
           font-size: .6em;
           padding-bottom: 5%;
@@ -599,13 +607,12 @@ body {
     background: url("../img/4.jpg") no-repeat center;
     background-size: cover; }
   body section#four .content {
-    height: 96vh;
+    height: 94vh;
     flex-direction: row-reverse;
     -webkit-flex-direction: row-reverse;
     color: black;
     text-shadow: 2px 1px 1px #FFFFFF; }
     body section#four .content #location, body section#four .content #reservation {
-      width: 50%;
       height: 100%;
       font-weight: 700;
       display: flex;
@@ -613,6 +620,7 @@ body {
       flex-direction: column;
       -webkit-flex-direction: column; }
     body section#four .content #location {
+      flex: 2;
       -webkit-justify-content: center;
       -webkit-align-items: center;
       justify-content: center;
@@ -622,7 +630,6 @@ body {
         width: 98%;
         height: 98%;
         border-radius: 5px;
-        border: 0.5vw solid #331a00;
         opacity: .9;
         display: flex;
         -webkit-display: flex;
@@ -641,6 +648,7 @@ body {
         font-size: 1.2em;
         z-index: 1000; }
     body section#four .content #reservation {
+      flex: 3;
       -webkit-justify-content: center;
       -webkit-align-items: center;
       justify-content: center;
@@ -711,7 +719,8 @@ body {
           body section#four .content #reservation span:nth-child(2) p {
             letter-spacing: 2px; }
         body section#four .content #reservation span:nth-child(3) {
-          font-size: 1.8em; }
+          font-size: 1.8em;
+          cursor: pointer; }
           body section#four .content #reservation span:nth-child(3) i {
             font-size: 1.8em;
             animation: write 3s infinite;
@@ -752,12 +761,12 @@ body {
     transform: translate(0%, 0%) scale(1) rotate(0deg); } }
   body section#four #footer {
     position: absolute;
-    height: 4vh;
-    width: 100vw;
+    height: 6vh;
+    width: 80vw;
     bottom: 0;
-    left: 0;
+    right: 0;
     background-color: black;
-    opacity: .8;
+    opacity: .9;
     color: white;
     z-index: 18;
     display: flex;
@@ -768,25 +777,76 @@ body {
     align-items: center; }
     body section#four #footer p {
       position: relative;
-      font-size: .5em;
+      font-size: .7em;
       text-transform: uppercase;
       user-select: none;
+      letter-spacing: .2vw;
       -webkit-align-items: center;
       -webkit-user-select: none;
-      -moz-user-select: none; }
+      -moz-user-select: none;
+      display: flex;
+      -webkit-display: flex;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
+      justify-content: center;
+      align-items: baseline;
+      -webkit-align-items: baseline; }
+      body section#four #footer p span#heart i {
+        font-size: 2em;
+        margin: 0 .3vw;
+        animation: beat 3s infinite;
+        -webkit-animation: beat 3s infinite;
+        color: #5900b3; }
+@keyframes beat {
+  0% {
+    transform: scale(1); }
+  20% {
+    transform: scale(1); }
+  25% {
+    transform: scale(1.5); }
+  30% {
+    transform: scale(0.9); }
+  35% {
+    transform: scale(1.3); }
+  40% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+@-webkit-keyframes beat {
+  0% {
+    transform: scale(1); }
+  20% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1.5); }
+  40% {
+    transform: scale(0.9); }
+  50% {
+    transform: scale(1.3); }
+  60% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
       body section#four #footer p span#myMail {
+        display: flex;
+        -webkit-display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        font-family: 'Dancing Script', cursive;
         flex-direction: row;
         -webkit-flex-direction: row;
+        letter-spacing: 0vw;
+        text-transform: lowercase;
+        font-size: 1.8em;
         color: red;
         cursor: pointer;
         transition: .2s;
-        letter-spacing: 1px;
         user-select: auto;
         -webkit-user-select: auto;
         -moz-user-select: auto; }
         body section#four #footer p span#myMail:active {
           opacity: .3;
-          font-size: .95em; }
+          font-size: 1.7em; }
       body section#four #footer p #myMailInfo {
         opacity: 0;
         transition: .3s;
@@ -848,7 +908,8 @@ body {
     text-transform: uppercase;
     line-height: 1.2; }
   body section#two .content .slideshow-container {
-    width: 99%; }
+    width: 99%;
+    height: 99%; }
     body section#two .content .slideshow-container .mySlides {
       flex-direction: row;
       -webkit-flex-direction: row;
@@ -891,7 +952,7 @@ body {
       body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
         display: flex;
         display: -webkit-flex;
-        width: 75%;
+        width: 80%;
         height: 60%;
         margin-top: 15%;
         justify-content: space-between;
@@ -919,10 +980,12 @@ body {
       font-size: 2.1em; }
     body section#four .content #reservation span:nth-child(3) {
       font-size: 1em; }
-    body section#four .content #location #map {
-      border-radius: 3px; }
-      body section#four .content #location #map h4 {
-        font-size: .8em; } }
+    body section#four .content #location #map h4 {
+      font-size: .8em; }
+  body section#four #footer {
+    width: 100vw; }
+    body section#four #footer p {
+      font-size: .5em; } }
 @media only screen and (orientation: landscape) and (max-device-width: 768px) {
   body nav ul li {
     flex-direction: row;
@@ -937,7 +1000,7 @@ body {
       flex: 3;
       font-size: 2em; }
   body section#two .content .slideshow-container {
-    height: 95%;
+    height: 85%;
     width: 70%; }
     body section#two .content .slideshow-container .mySlides .text {
       width: 40%;
@@ -1011,7 +1074,7 @@ body {
     background-position: 35% 100%;
     background-size: auto 100%;
     animation: zoom infinite 10s; } }
-@media only screen and (orientation: portrait) and (min-device-width: 769px) {
+@media only screen and (orientation: portrait) and (min-device-width: 768px) {
   body nav ul li {
     font-size: 1.3vw; }
   body section#one .content h1 {
@@ -1036,28 +1099,49 @@ body {
         margin: 5%; }
   body section#tree .content {
     font-size: 3em; }
-    body section#tree .content #pricesAndHours #price, body section#tree .content #pricesAndHours #hour {
-      height: 100%;
-      width: 100%;
-      justify-content: flex-end;
-      -webkit-justify-content: flex-end; }
-      body section#tree .content #pricesAndHours #price .iconRound, body section#tree .content #pricesAndHours #hour .iconRound {
-        width: 150px;
-        height: 150px;
-        left: calc(50% - 75px); }
-        body section#tree .content #pricesAndHours #price .iconRound i, body section#tree .content #pricesAndHours #hour .iconRound i {
-          font-size: 1em; }
-      body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
-        width: 90%;
-        margin-bottom: 7%; }
-        body section#tree .content #pricesAndHours #price ul li, body section#tree .content #pricesAndHours #hour ul li {
-          margin: 7% 0; }
+    body section#tree .content #pricesAndHours {
+      height: 90%;
+      font-size: .6em; }
+      body section#tree .content #pricesAndHours #price, body section#tree .content #pricesAndHours #hour {
+        height: 100%;
+        width: 100%;
+        justify-content: flex-end;
+        -webkit-justify-content: flex-end; }
+        body section#tree .content #pricesAndHours #price .iconRound, body section#tree .content #pricesAndHours #hour .iconRound {
+          width: 120px;
+          height: 120px;
+          left: calc(50% - 60px); }
+          body section#tree .content #pricesAndHours #price .iconRound i, body section#tree .content #pricesAndHours #hour .iconRound i {
+            font-size: 1em; }
+        body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
+          width: 60%;
+          margin-top: 10%; }
+          body section#tree .content #pricesAndHours #price ul li, body section#tree .content #pricesAndHours #hour ul li {
+            margin: 7% 0; }
   body section#four .content #reservation h2 {
     font-size: 3em; }
   body section#four .content #reservation span:nth-child(2) {
     font-size: 4em; }
   body section#four .content #reservation span:nth-child(3) {
     font-size: 2em; } }
+@media only screen and (orientation: landscape) and (min-device-width: 1024px) and (max-device-height: 768px) {
+  body section#two .content .slideshow-container {
+    width: 80%; }
+  body section#tree .content #pricesAndHours {
+    height: 55%; }
+    body section#tree .content #pricesAndHours #price, body section#tree .content #pricesAndHours #hour {
+      margin: 0 5%; }
+      body section#tree .content #pricesAndHours #price ul, body section#tree .content #pricesAndHours #hour ul {
+        width: 90%; }
+      body section#tree .content #pricesAndHours #price .iconRound, body section#tree .content #pricesAndHours #hour .iconRound {
+        top: 10%;
+        width: 120px;
+        height: 120px;
+        left: calc(50% - 60px); }
+        body section#tree .content #pricesAndHours #price .iconRound i, body section#tree .content #pricesAndHours #hour .iconRound i {
+          font-size: 2em; }
+  body section#four .content #reservation span:nth-child(3) {
+    font-size: 1.5em; } }
 @media only screen and (min-width: 768px) {
   body nav #navButton {
     width: 80px;

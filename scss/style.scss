@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Kalam');
+@import url('https://fonts.googleapis.com/css?family=Kalam|Dancing+Script');
 * {
 	margin: 0;
 	padding: 0;
@@ -221,6 +221,9 @@ body {
 					cursor: pointer;
 				}
 			}
+			li.red {
+				color: red;
+			}
 		}
 	}
 	nav.off {
@@ -364,10 +367,10 @@ body {
 						height: 4%;
 						border-radius: 50%;
 						opacity: .9;
-						animation: puls infinite 1s;
+ 						animation: puls infinite 1s;
 						-webkit-box-shadow: 0px 0px 5px 3px rgba(255,82,82,1);
 						-moz-box-shadow: 0px 0px 5px 3px rgba(255,82,82,1);
-						box-shadow: 0px 0px 5px 3px rgba(255,82,82,1);
+						box-shadow: 0px 0px 5px 3px rgba(255,82,82,1); 
 					}
 					@keyframes puls {
 						0% {transform: scale(.95);opacity: .1;}
@@ -381,32 +384,32 @@ body {
 					} 
 					.target#id1 {
 						background-color: red;
-						left: 31%;
-						top: 63.5%;
+						left: 31.3%;
+						top: 63.45%;
 					}
 					.target#id2 {
 						background-color: red;
-						left: 42.4%;
-						top: 90.2%;
+						left: 42.5%;
+						top: 89.5%;
 					}
 					.target#id3 {
 						background-color: red;
-						left: 54.3%;
-						top: 93.9%;
+						left: 54.2%;
+						top: 93.2%;
 					}
 					.target#id4 {
 						background-color: red;
-						left: 52.45%;
-						top: 84%;
+						left: 52.3%;
+						top: 83.6%;
 					}
 					.target#id5 {
 						background-color: red;
-						left: 39.6%;
-						top: 64.7%;
+						left: 39.8%;
+						top: 64.6%;
 					}
 					.target#id6 {
 						background-color: red;
-						left: 44.8%;
+						left: 44.95%;
 						top: 61.4%;
 					}
 					.target#id7 {
@@ -421,47 +424,47 @@ body {
 					}
 					.target#id9 {
 						background-color: red;
-						left: 61.3%;
-						top: 36.2%;
+						left: 61.2%;
+						top: 36.65%;
 					}
 					.target#id10 {
 						background-color: red;
-						left: 60.5%;
-						top: 13%;
+						left: 60.35%;
+						top: 13.7%;
 					}
 					.target#id11 {
 						background-color: red;
-						left: 62%;
-						top: 5.7%;
+						left: 61.8%;
+						top: 6.6%;
 					}
 					.target#id12 {
 						background-color: red;
-						left: 26%;
-						top: 12.5%;
+						left: 26.7%;
+						top: 13.5%;
 					}
 					.target#id13 {
 						background-color: red;
-						left: 13%;
-						top: 10%;
+						left: 13.9%;
+						top: 10.8%;
 					}
 					.target#id14 {
 						background-color: red;
-						left: 51.5%;
-						top: 19.5%;
+						left: 51.6%;
+						top: 20.1%;
 					}
 					.target#id15 {
 						background-color: red;
-						left: 50.5%;
-						top: 38.4%;
+						left: 50.6%;
+						top: 38.5%;
 					}
 					.target#id16 {
 						background-color: red;
-						left: 48.5%;
-						top: 45.7%;
+						left: 48.6%;
+						top: 45.8%;
 					}
 					.target#id17 {
 						background-color: red;
-						left: 32.7%;
+						left: 32.92%;
 						top: 54.4%;
 					}
 				}
@@ -559,6 +562,8 @@ body {
 					-webkit-box-shadow: 10px 15px 30px -1px rgb(0, 0, 0);
 					-moz-box-shadow: 10px 15px 30px -1px rgb(0, 0, 0);
 					box-shadow: 10px 15px 30px -1px rgb(0, 0, 0);
+					text-shadow: 0px 0px 5px white;
+					-webkit-text-shadow: 0px 0px 4px white;
 					.iconRound {
 						position: absolute;
 						top: 5%;
@@ -573,12 +578,12 @@ body {
 						border-radius: 50%;
 						background-color: black;
 						opacity: .9;
-						border: 5px solid white;
-						box-shadow: 0px 0px 10px 10px rgba(143,143,143,1);
-						-webkit-box-shadow: 0px 0px 10px 10px rgba(143,143,143,1);
+						border: 2px solid white;
+						box-shadow: 0px 0px 5px 2px rgba(143,143,143,1);
+						-webkit-box-shadow: 0px 0px 5px 2px rgba(143,143,143,1);
 						i {
 							font-size: 2.5em;
-							color: white
+							color: white;
 						}				
 					}
 					ul {
@@ -615,6 +620,8 @@ body {
 								text-transform: lowercase;
 								justify-content: flex-end;
 								-webkit-justify-content: flex-end;
+								text-shadow: 0px 0px 4px red;
+								-webkit-text-shadow: 0px 0px 4px red;
 								
 							}
 							span.ageInfo {
@@ -635,6 +642,8 @@ body {
 							&:nth-child(2), &:nth-child(3) {
 								font-size: 1.3em;
 								color: red;
+								text-shadow: 0px 0px 4px red;
+								-webkit-text-shadow: 0px 0px 4px red;
 								sup {
 									font-size: .6em;
 									padding-bottom: 5%;
@@ -653,13 +662,12 @@ body {
 			background-size: cover;
 		}
 		.content {
-			height: 96vh;
+			height: 94vh;
 			flex-direction: row-reverse;
 			-webkit-flex-direction: row-reverse;
 			color: black;
 			text-shadow: 2px 1px 1px #FFFFFF;
 			#location, #reservation {
-				width: 50%;
 				height: 100%;
 				font-weight: 700;
 				display: flex;
@@ -668,6 +676,7 @@ body {
 				-webkit-flex-direction: column;
 			}
 			#location {
+				flex: 2;
 				-webkit-justify-content: center;
 				-webkit-align-items: center;
 				justify-content: center;
@@ -677,7 +686,6 @@ body {
 					width: 98%;
 					height: 98%;
 					border-radius: 5px;
-					border: .5vw solid rgb(51, 26, 0);
 					opacity: .9;
 					display: flex;
 					-webkit-display: flex;
@@ -699,6 +707,7 @@ body {
 				}
 			}
 			#reservation {
+				flex: 3;
 				-webkit-justify-content: center;
 				-webkit-align-items: center;
 				justify-content: center;
@@ -758,6 +767,7 @@ body {
 					}
 					&:nth-child(3) {
 						font-size: 1.8em;
+						cursor: pointer;
 						i {
 							font-size: 1.8em;
 							animation: write 3s infinite;
@@ -789,12 +799,12 @@ body {
 		}
 		#footer {
 			position: absolute;
-			height: 4vh;
-			width: 100vw;
+			height: 6vh;
+			width: 80vw;
 			bottom: 0;
-			left: 0;
+			right: 0;
 			background-color: black;
-			opacity: .8;
+			opacity: .9;
 			color: white;
 			z-index: 18;
 			display: flex;
@@ -805,25 +815,67 @@ body {
 			align-items: center;
 			p {
 				position: relative;
-				font-size: .5em;
+				font-size: .7em;
 				text-transform: uppercase;
-				user-select: none; 
+				user-select: none;
+				letter-spacing: .2vw; 
 				-webkit-align-items: center;
 				-webkit-user-select: none; 
 				-moz-user-select: none; 
-				span#myMail {				
+				display: flex;
+				-webkit-display: flex;
+				-webkit-justify-content: center;
+				-webkit-align-items: center;
+				justify-content: center;
+				align-items: baseline;
+				-webkit-align-items: baseline;
+				span#heart {
+					i {
+						font-size: 2em;
+						margin: 0 .3vw;
+						animation: beat 3s infinite;
+						-webkit-animation: beat 3s infinite;
+						color: rgb(89, 0, 179);	
+					}
+					@keyframes beat {
+						0% {transform: scale(1)}
+						20% {transform: scale(1)}
+						25% {transform: scale(1.5)}
+						30% {transform: scale(.9)}
+						35% {transform: scale(1.3)}
+						40% {transform: scale(1)}
+						100% {transform: scale(1)}
+					}
+					@-webkit-keyframes beat {
+						0% {transform: scale(1)}
+						20% {transform: scale(1)}
+						30% {transform: scale(1.5)}
+						40% {transform: scale(.9)}
+						50% {transform: scale(1.3)}
+						60% {transform: scale(1)}
+						100% {transform: scale(1)}
+					}
+				}
+				span#myMail {
+					display: flex;
+					-webkit-display: flex;
+					-webkit-align-items: center;
+					align-items: center;
+					font-family: 'Dancing Script', cursive;		
 					flex-direction: row;
 					-webkit-flex-direction: row;
+					letter-spacing: 0vw;
+					text-transform: lowercase;
+					font-size: 1.8em;
 					color: red;
 					cursor: pointer;
 					transition: .2s;
-					letter-spacing: 1px;
 					user-select: auto; 
 					-webkit-user-select: auto; 
-					-moz-user-select: auto; 
+					-moz-user-select: auto;
 					&:active {
 						opacity: .3;
-						font-size: .95em;
+						font-size: 1.7em;
 					}
 				}
 				#myMailInfo {
@@ -918,6 +970,7 @@ body {
         	.content {
 	        	.slideshow-container {
 	        		width: 99%;
+	        		height: 99%;
 					.mySlides {
 						flex-direction: row;
 						-webkit-flex-direction: row;
@@ -975,7 +1028,7 @@ body {
 						ul {
 							display: flex;
 							display: -webkit-flex;
-							width: 75%;
+							width: 80%;
 							height: 60%;
 							margin-top: 15%;
 							justify-content: space-between;
@@ -1033,11 +1086,16 @@ body {
 				}
 				#location {
 					#map {
-						border-radius: 3px;
 						h4 {
 							font-size: .8em;
 						}
 					}
+				}
+			}
+			#footer {
+				width: 100vw;
+				p {
+					font-size: .5em;
 				}
 			}
         }
@@ -1068,7 +1126,7 @@ body {
         section#two {
 			.content {
 				.slideshow-container {
-					height: 95%;
+					height: 85%;
 					width: 70%;
 					.mySlides {
 						.text {
@@ -1178,7 +1236,7 @@ body {
 		} 
 	}
 }
-@media only screen and (orientation: portrait) and (min-device-width: 769px) {
+@media only screen and (orientation: portrait) and (min-device-width: 768px) {
 	body {
 		nav {
 			ul {
@@ -1225,22 +1283,24 @@ body {
 			.content {
 				font-size: 3em;
 				#pricesAndHours {
+					height: 90%;
+					font-size: .6em;
 					#price, #hour {
 						height: 100%;
 						width: 100%;
 						justify-content: flex-end;
 						-webkit-justify-content: flex-end;
 						.iconRound {
-							width: 150px;
-							height: 150px;
-							left: calc(50% - 75px);
+							width: 120px;
+							height: 120px;
+							left: calc(50% - 60px);
 							i {
 								font-size: 1em;
 							}
 						}
 						ul {
-							width: 90%;
-							margin-bottom: 7%;
+							width: 60%;
+							margin-top: 10%;
 							li {
 								margin: 7% 0;
 							}
@@ -1266,6 +1326,50 @@ body {
 				}
 			}
 		}
+	}
+}
+@media only screen and (orientation: landscape) and (min-device-width: 1024px) and (max-device-height: 768px) {
+	body {
+		section#two {
+			.content {
+				.slideshow-container {
+					width: 80%;
+				}
+			}
+		}
+		section#tree {
+			.content {
+				#pricesAndHours {
+					height: 55%;
+					#price, #hour {
+						margin:0 5%;
+						ul {
+							width: 90%;
+						}
+						.iconRound {
+							top: 10%;
+							width: 120px;
+							height: 120px;
+							left: calc(50% - 60px);
+							i {
+								font-size: 2em;
+							}
+						}
+					}
+				}
+			}
+		}
+		section#four {
+			.content {
+				#reservation {
+					span {
+						&:nth-child(3) {
+							font-size: 1.5em;
+						}
+					}
+				}
+			}
+		}	
 	}
 }
 @media only screen and (min-width: 768px) {
