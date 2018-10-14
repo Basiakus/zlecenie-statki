@@ -6,7 +6,7 @@ const nav = document.querySelector('nav');
 const button = document.querySelector('#navButton');
 /*The compass-needle in a button*/			
 const compassNeedle = document.querySelector('#compassNeedle');
-/*all the sections// all the sections*/	
+/*all the sections*/	
 const sections = document.querySelectorAll('section');	
 
 const emptyContents = document.querySelectorAll('.emptyContent');
