@@ -1,14 +1,23 @@
 /* --VARIABLE DECLARATION-- */
 
-const nav = document.querySelector('nav');						// The navigation
-const button = document.querySelector('#navButton');			// The button in a navigation (mobile devices)
-const compassNeedle = document.querySelector('#compassNeedle')	// The compass-needle in a button
-const sections = document.querySelectorAll('section');			// all the sections
+/*The navigation*/
+const nav = document.querySelector('nav');
+/*The button in a navigation (mobile devices)*/						
+const button = document.querySelector('#navButton');
+/*The compass-needle in a button*/			
+const compassNeedle = document.querySelector('#compassNeedle');
+/*all the sections// all the sections*/	
+const sections = document.querySelectorAll('section');	
+
 const emptyContents = document.querySelectorAll('.emptyContent');
-const navTrigers = document.querySelectorAll('nav li');			// navigation poits 
-const prevSlide = document.querySelector('.prev');				// prev slide button
-const nextSlide = document.querySelector('.next');				// next slide button
-let slideIndex = 1;												// current slide in carusel										
+/*navigation poits*/	
+const navTrigers = document.querySelectorAll('nav li');
+/*prev slide button*/			
+const prevSlide = document.querySelector('.prev');
+/*next slide button*/				
+const nextSlide = document.querySelector('.next');
+/*current slide in carusel*/				
+let slideIndex = 1;																						
 
 
 
@@ -103,9 +112,9 @@ const mymap = L.map('map').setView([53.9077511, 14.2509691], 16.5);
 
 /*inicialize map*/
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    maxZoom: 20,    
-    id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1IjoiYmFzaWFrdXMiLCJhIjoiY2ptY2dtaHU0MDlvNzNrbnp6M2QwNXk0YiJ9.6eUNcDrGgcNhRBAMrMouPw'
+	maxZoom: 20,    
+	id: 'mapbox.streets',
+	accessToken: 'pk.eyJ1IjoiYmFzaWFrdXMiLCJhIjoiY2ptY2dtaHU0MDlvNzNrbnp6M2QwNXk0YiJ9.6eUNcDrGgcNhRBAMrMouPw'
 }).addTo(mymap);
 
 /*inicialize marker*/
@@ -142,21 +151,21 @@ window.addEventListener("load",() => {
 function copyEmail () {
 	const myMail = document.querySelector('#myMail');
 	const myMailInfo = document.querySelector('#myMailInfo');
-    const tempTextArea = document.createElement("textarea");
-    const originalText = this.textContent;
-    tempTextArea.value = originalText;
-    document.body.appendChild(tempTextArea);
-    tempTextArea.select();
-    document.execCommand("Copy");
-    tempTextArea.remove();
+	const tempTextArea = document.createElement("textarea");
+	const originalText = this.textContent;
+	tempTextArea.value = originalText;
+	document.body.appendChild(tempTextArea);
+	tempTextArea.select();
+	document.execCommand("Copy");
+	tempTextArea.remove();
 
-    if(window.screen.availWidth < 1024) {
-    	this.textContent = "skopiowano";
-    	setTimeout(() => this.textContent = originalText, 2000);
-    } else {
-    	myMailInfo.classList.add('copied');
-    	setTimeout(() => myMailInfo.classList.remove('copied'), 2000);
-    }
+	if(window.screen.availWidth < 1024) {
+		this.textContent = "skopiowano";
+		setTimeout(() => this.textContent = originalText, 2000);
+	} else {
+		myMailInfo.classList.add('copied');
+		setTimeout(() => myMailInfo.classList.remove('copied'), 2000);
+	}
 }
 myMail.addEventListener('click', copyEmail);
 
